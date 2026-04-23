@@ -2,8 +2,7 @@
 # build_windows.ps1 — Build a self-contained Windows distribution for hash-turbo.
 #
 # Produces:
-#   dist\hash-turbo.exe                      — standalone CLI binary (onefile)
-#   dist\hash-turbo-gui\                     — GUI onedir bundle
+#   dist\hash-turbo\                     — unified onedir bundle (CLI + GUI)
 #   dist\hash-turbo-<version>-windows.msi    — distributable MSI installer
 #
 # Requirements:
@@ -40,15 +39,13 @@ if ($LASTEXITCODE -ne 0) { Write-Error "PyInstaller failed"; exit 1 }
 Write-Host "  PyInstaller build complete."
 
 # ── Build MSI with WiX ────────────────────────────────────────────────────────
-$GUIDir   = (Resolve-Path "dist\hash-turbo-gui").Path
-$CLIExe   = (Resolve-Path "dist\hash-turbo.exe").Path
+$AppDir   = (Resolve-Path "dist\hash-turbo").Path
 $IconFile  = (Resolve-Path "assets\icon.ico").Path
 $MsiOut   = "dist\hash-turbo-$VERSION-windows.msi"
 
 wix build installer\hash-turbo.wxs `
     -d Version=$VERSION `
-    -d GUIDir=$GUIDir `
-    -d CLIExe=$CLIExe `
+    -d AppDir=$AppDir `
     -d IconFile=$IconFile `
     -out $MsiOut
 
@@ -56,6 +53,5 @@ if ($LASTEXITCODE -ne 0) { Write-Error "WiX build failed"; exit 1 }
 
 Write-Host ""
 Write-Host "Done! Artifacts:"
-Write-Host "  dist\hash-turbo.exe"
-Write-Host "  dist\hash-turbo-gui\"
+Write-Host "  dist\hash-turbo\"
 Write-Host "  $MsiOut"

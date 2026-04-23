@@ -3,8 +3,7 @@
   hash-turbo.wxs — WiX v4 installer source
   Build with: wix build installer\hash-turbo.wxs
               -d Version=<version>
-              -d GUIDir=<abs-path-to-dist\hash-turbo-gui>
-              -d CLIExe=<abs-path-to-dist\hash-turbo.exe>
+              -d AppDir=<abs-path-to-dist\hash-turbo>
               -d IconFile=<abs-path-to-assets\icon.ico>
               -out dist\hash-turbo-<version>-windows.msi
 -->
@@ -29,10 +28,8 @@
     <!-- Installation directory: %ProgramFiles%\hash-turbo\ -->
     <StandardDirectory Id="ProgramFiles64Folder">
       <Directory Id="INSTALLFOLDER" Name="hash-turbo">
-        <!-- GUI onedir bundle — all files and subdirectories -->
-        <Files Include="$(var.GUIDir)\**" />
-        <!-- CLI onefile binary -->
-        <Files Include="$(var.CLIExe)" />
+        <!-- Unified onedir bundle — all files and subdirectories -->
+        <Files Include="$(var.AppDir)\**" />
       </Directory>
     </StandardDirectory>
 
@@ -44,7 +41,7 @@
             Id="GUIShortcut"
             Name="hash-turbo"
             Description="Cross-platform file hash management tool"
-            Target="[INSTALLFOLDER]hash-turbo-gui.exe"
+            Target="[INSTALLFOLDER]hash-turbo.exe"
             WorkingDirectory="INSTALLFOLDER"
             Icon="HashTurboIcon"
             IconIndex="0" />

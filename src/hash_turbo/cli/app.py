@@ -68,6 +68,24 @@ def _resolve_log_level(verbose: int) -> int:
     return logging.WARNING
 
 
+def _hide_windows_console() -> None:
+    """Hide the console window on Windows before launching the GUI.
+
+    Built with console=True so CLI stdout/stderr always work; this hides
+    the window before Qt opens its first frame -- imperceptible in practice.
+    """
+    if sys.platform != "win32":
+        return
+    try:
+        import ctypes
+
+        hwnd = ctypes.windll.kernel32.GetConsoleWindow()  # type: ignore[attr-defined]
+        if hwnd:
+            ctypes.windll.user32.ShowWindow(hwnd, 0)  # SW_HIDE = 0  # type: ignore[attr-defined]
+    except Exception:
+        pass
+
+
 @click.group(invoke_without_command=True)
 @click.version_option(version=__version__, prog_name="hash-turbo")
 @click.option(
@@ -115,6 +133,7 @@ def main(ctx: click.Context, verbose: int, log_file: str | None) -> None:
             ctx.exit(1)
             return
 
+        _hide_windows_console()
         GuiApp.run()
 
 
@@ -466,6 +485,7 @@ def gui_cmd() -> None:
         )
         raise SystemExit(1)
 
+    _hide_windows_console()
     GuiApp.run()
 
 

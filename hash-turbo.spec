@@ -83,18 +83,17 @@ a = Analysis(
 )
 pyz = PYZ(a.pure)
 
-# CLI executable — console=True so stdin/stdout/stderr work in terminals
-exe_cli = EXE(
+# Single unified binary — console=True so CLI stdout/stderr always work;
+# GUI hides the console window via ctypes before Qt opens its first frame.
+exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.datas,
-    [],
+    exclude_binaries=True,        # onedir: Qt libs stay on disk, fast startup
     name='hash-turbo',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,
+    upx=False,
     upx_exclude=[],
     runtime_tmpdir=None,
     console=True,
@@ -107,34 +106,12 @@ exe_cli = EXE(
     version='version_info.py',
 )
 
-# GUI executable — onedir so Qt libs live in the install directory (no per-launch extraction)
-exe_gui = EXE(
-    pyz,
-    a.scripts,
-    exclude_binaries=True,
-    name='hash-turbo-gui',
-    debug=False,
-    bootloader_ignore_signals=False,
-    strip=False,
-    upx=False,
-    upx_exclude=[],
-    runtime_tmpdir=None,
-    console=False,
-    disable_windowed_traceback=False,
-    argv_emulation=False,
-    target_arch=None,
-    codesign_identity=None,
-    entitlements_file=None,
-    icon=['assets\\icon.ico'],
-    version='version_info.py',
-)
-
-coll_gui = COLLECT(
-    exe_gui,
+coll = COLLECT(
+    exe,
     a.binaries,
     a.datas,
     strip=False,
     upx=False,
     upx_exclude=[],
-    name='hash-turbo-gui',
+    name='hash-turbo',
 )
