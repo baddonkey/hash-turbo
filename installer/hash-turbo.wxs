@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  hash-turbo.wxs — WiX v4 installer source
+  Build with: wix build installer\hash-turbo.wxs
+              -d Version=<version>
+              -d GUIDir=<abs-path-to-dist\hash-turbo-gui>
+              -d CLIExe=<abs-path-to-dist\hash-turbo.exe>
+              -d IconFile=<abs-path-to-assets\icon.ico>
+              -out dist\hash-turbo-<version>-windows.msi
+-->
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package
+    Name="hash-turbo"
+    Manufacturer="hash-turbo"
+    Version="$(var.Version)"
+    UpgradeCode="3C8F2A17-5D9E-4B1A-8C2D-7E6F5A4B3C21"
+    Scope="perMachine">
+
+    <!-- Remove any older version before installing -->
+    <MajorUpgrade DowngradeErrorMessage="A newer version of hash-turbo is already installed." />
+
+    <!-- Embed all files in a single .cab inside the MSI -->
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- App icon shown in Add/Remove Programs -->
+    <Icon Id="HashTurboIcon" SourceFile="$(var.IconFile)" />
+    <Property Id="ARPPRODUCTICON" Value="HashTurboIcon" />
+
+    <!-- Installation directory: %ProgramFiles%\hash-turbo\ -->
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" Name="hash-turbo">
+        <!-- GUI onedir bundle — all files and subdirectories -->
+        <Files Include="$(var.GUIDir)\**" />
+        <!-- CLI onefile binary -->
+        <Files Include="$(var.CLIExe)" />
+      </Directory>
+    </StandardDirectory>
+
+    <!-- Start Menu shortcut -->
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="AppStartMenuFolder" Name="hash-turbo">
+        <Component Id="AppShortcut" Guid="*">
+          <Shortcut
+            Id="GUIShortcut"
+            Name="hash-turbo"
+            Description="Cross-platform file hash management tool"
+            Target="[INSTALLFOLDER]hash-turbo-gui.exe"
+            WorkingDirectory="INSTALLFOLDER"
+            Icon="HashTurboIcon"
+            IconIndex="0" />
+          <!-- Clean up the Start Menu folder on uninstall -->
+          <RemoveFolder Id="RemoveAppStartMenuFolder" Directory="AppStartMenuFolder" On="uninstall" />
+          <!-- Registry key is the KeyPath for this component -->
+          <RegistryValue
+            Root="HKCU"
+            Key="Software\hash-turbo"
+            Name="installed"
+            Type="integer"
+            Value="1"
+            KeyPath="yes" />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+
+  </Package>
+</Wix>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="110" x2="905" y2="915" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1674F2"/>
+      <stop offset="1" stop-color="#0B57D0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- blue rounded square -->
+  <rect x="110" y="80" width="804" height="840" rx="150" fill="url(#bg)"/>
+
+  <!-- hash -->
+  <g fill="#F4F4F4">
+    <!-- vertical left -->
+    <rect x="332" y="185" width="104" height="600" rx="52" transform="rotate(4 332 185)"/>
+    <!-- vertical right -->
+    <rect x="604" y="185" width="104" height="600" rx="52" transform="rotate(4 604 185)"/>
+    <!-- top horizontal -->
+    <rect x="218" y="360" width="606" height="74" rx="37"/>
+    <!-- bottom horizontal -->
+    <rect x="194" y="560" width="618" height="74" rx="37"/>
+  </g>
+</svg>

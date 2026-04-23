@@ -1,0 +1,723 @@
+# Italian translations for hash-turbo.
+# Copyright (C) 2026 hash-turbo
+# This file is distributed under the same license as the hash-turbo project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hash-turbo 1.0.2\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-04-19 06:53+0200\n"
+"PO-Revision-Date: 2026-04-11 13:21+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: it\n"
+"Language-Team: it <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: QML
+msgid "%1 entries loaded (showing first 200 lines)"
+msgstr "%1 voci caricate (prime 200 righe visualizzate)"
+
+#: QML
+msgid "%1 item(s)"
+msgstr "%1 elemento/i"
+
+#: QML
+msgid "&About"
+msgstr "&Informazioni"
+
+#: QML
+msgid "&File"
+msgstr "&File"
+
+#: QML
+msgid "&Help"
+msgstr "&Aiuto"
+
+#: QML
+msgid "&User Manual"
+msgstr "&Manuale utente"
+
+#: QML
+msgid "About hash-turbo"
+msgstr "Informazioni su hash-turbo"
+
+#: QML
+msgid "Actions"
+msgstr "Azioni"
+
+#: QML
+msgid "Add Files"
+msgstr "Aggiungi file"
+
+#: QML
+msgid "Add Folder"
+msgstr "Aggiungi cartella"
+
+#: QML
+msgid "Algorithm"
+msgstr "Algoritmo"
+
+#: QML
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: QML
+msgid "Auto-detected"
+msgstr "Rilevato automaticamente"
+
+#: QML
+msgid "Auto-filled from source file"
+msgstr "Compilato automaticamente dal file sorgente"
+
+#: QML
+msgid "Base dir"
+msgstr "Dir. base"
+
+#: QML
+msgid "Binary mode only"
+msgstr "Solo modalità binaria"
+
+#: QML
+msgid "Browse…"
+msgstr "Sfoglia…"
+
+#: QML
+msgid "By hash"
+msgstr "Per hash"
+
+#: QML
+msgid "By path"
+msgstr "Per percorso"
+
+#: QML
+msgid "CR (Classic Mac)"
+msgstr "CR (Mac classico)"
+
+#: QML
+msgid "CRLF (Windows)"
+msgstr "CRLF (Windows)"
+
+#: QML
+msgid "Cancel"
+msgstr "Annulla"
+
+#: QML
+msgid "Clear"
+msgstr "Cancella"
+
+#: QML
+msgid "Custom base dir"
+msgstr "Dir. base personalizzata"
+
+#: QML
+msgid "Deduplicate"
+msgstr "Deduplica"
+
+#: QML
+msgid "Default Algorithm:"
+msgstr "Algoritmo predefinito:"
+
+#: QML
+msgid "Defaults"
+msgstr "Predefiniti"
+
+#: QML
+msgid "Defaults to hash file parent folder"
+msgstr "Predefinito: cartella principale del file hash"
+
+#: QML
+msgid "Detect new files"
+msgstr "Rileva nuovi file"
+
+#: QML
+msgid "Drop files or folders here"
+msgstr "Trascina file o cartelle qui"
+
+#: QML
+msgid "Drop hash file here"
+msgstr "Trascina il file hash qui"
+
+#: QML
+msgid "E&xit"
+msgstr "&Esci"
+
+#: QML
+msgid "Exclude Patterns"
+msgstr "Pattern di esclusione"
+
+#: QML
+msgid "Filesystem"
+msgstr "File system"
+
+#: QML
+msgid "Flexible whitespace"
+msgstr "Spaziatura flessibile"
+
+#: QML
+msgid "Format"
+msgstr "Formato"
+
+#: QML
+msgid "Hash"
+msgstr "Hash"
+
+#: QML
+msgid "Hash case:"
+msgstr "Maiuscole/minuscole hash:"
+
+#: QML
+msgid "Input"
+msgstr "Ingresso"
+
+#: QML
+msgid "Keep original"
+msgstr "Mantieni originale"
+
+#: QML
+msgid "LF (Linux/macOS)"
+msgstr "LF (Linux/macOS)"
+
+#: QML
+msgid "Language"
+msgstr "Lingua"
+
+#: QML
+msgid "Line ending:"
+msgstr "Fine riga:"
+
+#: QML
+msgid "Load Hash File"
+msgstr "Carica file hash"
+
+#: QML
+msgid "Log"
+msgstr "Registro"
+
+#: QML
+msgid "Lowercase"
+msgstr "Minuscole"
+
+#: QML
+msgid "None"
+msgstr "Nessuno"
+
+#: QML
+msgid "Normalize whitespace"
+msgstr "Normalizza spaziatura"
+
+#: QML
+msgid "One pattern per line. Prefix with re: for regex."
+msgstr "Un pattern per riga. Prefisso re: per espressioni regolari."
+
+#: QML
+msgid "Open"
+msgstr "Apri"
+
+#: QML
+msgid "Open Hash File"
+msgstr "Apri file hash"
+
+#: QML
+msgid "Open Report"
+msgstr "Apri rapporto"
+
+#: QML
+msgid "Open output file"
+msgstr "Apri file di output"
+
+#: QML
+msgid "Output"
+msgstr "Uscita"
+
+#: QML
+msgid "Output Format:"
+msgstr "Formato di output:"
+
+#: QML
+msgid "Output Hash File"
+msgstr "Salva file hash"
+
+#: QML
+msgid "Output file:"
+msgstr "File di output:"
+
+#: QML
+msgid "Output folder"
+msgstr "Cartella di uscita"
+
+#: QML
+msgid "Output format:"
+msgstr "Formato di output:"
+
+#: QML
+msgid "POSIX (/)"
+msgstr "POSIX (/)"
+
+#: QML
+msgid "Parameters"
+msgstr "Parametri"
+
+#: QML
+msgid "Paste hash entries here, or load a hash file..."
+msgstr "Incolla voci hash qui o carica un file hash…"
+
+#: QML
+msgid "Path Mode:"
+msgstr "Modalità percorso:"
+
+#: QML
+msgid "Path separator:"
+msgstr "Separatore di percorso:"
+
+#: QML
+msgid "Recursive"
+msgstr "Ricorsivo"
+
+#: QML
+msgid "Relative paths"
+msgstr "Percorsi relativi"
+
+#: QML
+msgid "Reload file from disk"
+msgstr "Ricarica file dal disco"
+
+#: QML
+msgid "Restart the application for language changes to take full effect."
+msgstr "Riavviare l'applicazione affinché il cambio di lingua abbia pieno effetto."
+
+#: QML
+msgid "Result"
+msgstr "Risultato"
+
+#: QML
+msgid "Sanitize"
+msgstr "Normalizza"
+
+#: QML
+msgid "Select Base Directory"
+msgstr "Seleziona directory di base"
+
+#: QML
+msgid "Select Files"
+msgstr "Seleziona file"
+
+#: QML
+msgid "Select Folder"
+msgstr "Seleziona cartella"
+
+#: QML
+msgid "Select Output Directory"
+msgstr "Seleziona directory di output"
+
+#: QML
+msgid "Select Output File"
+msgstr "Seleziona file di output"
+
+#: QML
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: QML
+msgid "Sort:"
+msgstr "Ordinamento:"
+
+#: QML
+msgid "Source"
+msgstr "Sorgente"
+
+#: QML
+msgid "Strip prefix:"
+msgstr "Rimuovi prefisso:"
+
+#: QML
+msgid "System"
+msgstr "Sistema"
+
+#: QML
+msgid "Theme:"
+msgstr "Tema:"
+
+#: QML
+msgid "Transform"
+msgstr "Trasforma"
+
+#: QML
+msgid "Transform results will appear here…"
+msgstr "I risultati della trasformazione appariranno qui…"
+
+#: QML
+msgid "Uppercase"
+msgstr "Maiuscole"
+
+#: QML
+msgid "Verify"
+msgstr "Verifica"
+
+#: QML
+msgid "Windows (\\)"
+msgstr "Windows (\\)"
+
+#: QML
+msgid "…"
+msgstr "…"
+
+#~ msgid "Restart"
+#~ msgstr "Riavvia"
+
+#~ msgid "Add Files"
+#~ msgstr "Aggiungi file"
+
+#~ msgid "Add Folder"
+#~ msgstr "Aggiungi cartella"
+
+#~ msgid "Algorithm:"
+#~ msgstr "Algoritmo:"
+
+#~ msgid "Hash"
+#~ msgstr "Hash"
+
+#~ msgid "Relative paths"
+#~ msgstr "Percorsi relativi"
+
+#~ msgid "Base dir:"
+#~ msgstr "Dir. base:"
+
+#~ msgid "Auto-detected from first added path"
+#~ msgstr "Rilevato automaticamente dal primo percorso aggiunto"
+
+#~ msgid "Browse"
+#~ msgstr "Sfoglia"
+
+#~ msgid "Pending files: {}"
+#~ msgstr "File in attesa: {}"
+
+#~ msgid "Clear"
+#~ msgstr "Cancella"
+
+#~ msgid "Cancel"
+#~ msgstr "Annulla"
+
+#~ msgid "Output file:"
+#~ msgstr "File di output:"
+
+#~ msgid "Open"
+#~ msgstr "Apri"
+
+#~ msgid "Open the output file with the default application"
+#~ msgstr "Apri il file di output con l'applicazione predefinita"
+
+#~ msgid "Select Files"
+#~ msgstr "Seleziona file"
+
+#~ msgid "Select Folder"
+#~ msgstr "Seleziona cartella"
+
+#~ msgid "Select Base Directory"
+#~ msgstr "Seleziona directory di base"
+
+#~ msgid "Scanning files…"
+#~ msgstr "Ricerca file…"
+
+#~ msgid "Scanning directory…"
+#~ msgstr "Scansione directory…"
+
+#~ msgid "Hashing: %v / %m files"
+#~ msgstr "Hashing: %v / %m file"
+
+#~ msgid "Found {} file(s). Hashing…"
+#~ msgstr "{} file trovato/i. Hashing…"
+
+#~ msgid "Done. {} hash(es) written."
+#~ msgstr "Fatto. {} hash scritto/i."
+
+#~ msgid "Cancelled. {} file(s) completed."
+#~ msgstr "Annullato. {} file elaborato/i."
+
+#~ msgid "Error"
+#~ msgstr "Errore"
+
+#~ msgid "Output Hash File"
+#~ msgstr "Salva file hash"
+
+#~ msgid "SHA256 (*.sha256);;All Files (*)"
+#~ msgstr "SHA256 (*.sha256);;Tutti i file (*)"
+
+#~ msgid "Write Error"
+#~ msgstr "Errore di scrittura"
+
+#~ msgid "Verify"
+#~ msgstr "Verifica"
+
+#~ msgid "Settings"
+#~ msgstr "Impostazioni"
+
+#~ msgid "Ready"
+#~ msgstr "Pronto"
+
+#~ msgid "&File"
+#~ msgstr "&File"
+
+#~ msgid "E&xit"
+#~ msgstr "&Esci"
+
+#~ msgid "&Help"
+#~ msgstr "&Aiuto"
+
+#~ msgid "&About"
+#~ msgstr "&Informazioni"
+
+#~ msgid "Help"
+#~ msgstr "Aiuto"
+
+#~ msgid ""
+#~ "hash-turbo — Cross-platform file hash management tool.\n"
+#~ "\n"
+#~ "Hash tab: select a folder, choose an algorithm, and generate hashes.\n"
+#~ "Verify tab: load a hash file or paste entries, then verify files.\n"
+#~ "Settings tab: configure exclude patterns and preferences."
+#~ msgstr ""
+#~ "hash-turbo — Strumento multipiattaforma per la gestione degli hash dei file.\n"
+#~ "\n"
+#~ "Scheda Hash: selezionare una cartella, scegliere un algoritmo e generare gli hash.\n"
+#~ "Scheda Verifica: caricare un file hash o incollare le voci, quindi verificare i file.\n"
+#~ "Scheda Impostazioni: configurare i pattern di esclusione e le preferenze."
+
+#~ msgid "About hash-turbo"
+#~ msgstr "Informazioni su hash-turbo"
+
+#~ msgid ""
+#~ "hash-turbo v{version}\n"
+#~ "\n"
+#~ "Cross-platform file hash management tool\n"
+#~ "with CLI and PySide6 GUI.\n"
+#~ "\n"
+#~ "License: MIT"
+#~ msgstr ""
+#~ "hash-turbo v{version}\n"
+#~ "\n"
+#~ "Strumento multipiattaforma per la gestione degli hash dei file\n"
+#~ "con CLI e interfaccia PySide6.\n"
+#~ "\n"
+#~ "Licenza: MIT"
+
+#~ msgid "Defaults"
+#~ msgstr "Predefiniti"
+
+#~ msgid "Default Algorithm:"
+#~ msgstr "Algoritmo predefinito:"
+
+#~ msgid "Path Mode:"
+#~ msgstr "Modalità percorso:"
+
+#~ msgid "Output Format:"
+#~ msgstr "Formato di output:"
+
+#~ msgid "Appearance"
+#~ msgstr "Aspetto"
+
+#~ msgid "Theme:"
+#~ msgstr "Tema:"
+
+#~ msgid "Language"
+#~ msgstr "Lingua"
+
+#~ msgid "Language:"
+#~ msgstr "Lingua:"
+
+#~ msgid "Restart the application for language changes to take full effect."
+#~ msgstr "Riavviare l'applicazione affinché il cambio di lingua abbia pieno effetto."
+
+#~ msgid "Exclude Patterns"
+#~ msgstr "Pattern di esclusione"
+
+#~ msgid "One pattern per line. Prefix with re: for regex."
+#~ msgstr "Un pattern per riga. Prefisso re: per espressioni regolari."
+
+#~ msgid "Load Hash File"
+#~ msgstr "Carica file hash"
+
+#~ msgid "Detect new files"
+#~ msgstr "Rileva nuovi file"
+
+#~ msgid "Report files in the folder that have no hash entry"
+#~ msgstr "Segnalare i file nella cartella che non hanno una voce hash"
+
+#~ msgid "Custom base dir"
+#~ msgstr "Dir. base personalizzata"
+
+#~ msgid "Override the base directory used to resolve relative paths in the hash file"
+#~ msgstr "Sovrascrivere la directory di base utilizzata per risolvere i percorsi relativi nel file hash"
+
+#~ msgid "Auto-detected from hash file location"
+#~ msgstr "Rilevato automaticamente dalla posizione del file hash"
+
+#~ msgid "Output folder:"
+#~ msgstr "Cartella di output:"
+
+#~ msgid "Defaults to hash file parent folder"
+#~ msgstr "Predefinito: cartella principale del file hash"
+
+#~ msgid "Drop a hash file here, or paste hash entries (GNU or BSD format)..."
+#~ msgstr "Trascinare qui un file hash o incollare le voci (formato GNU o BSD)…"
+
+#~ msgid "Verifying: %v / %m files"
+#~ msgstr "Verifica: %v / %m file"
+
+#~ msgid "Open Report"
+#~ msgstr "Apri rapporto"
+
+#~ msgid "Open the verification report log"
+#~ msgstr "Apri il registro del rapporto di verifica"
+
+#~ msgid "Select Output Directory"
+#~ msgstr "Seleziona directory di output"
+
+#~ msgid "Open Hash File"
+#~ msgstr "Apri file hash"
+
+#~ msgid "Hash Files (*.sha256 *.md5 *.sha1 *.sha512);;All Files (*)"
+#~ msgstr "File hash (*.sha256 *.md5 *.sha1 *.sha512);;Tutti i file (*)"
+
+#~ msgid "Hash file: {}"
+#~ msgstr "File hash: {}"
+
+#~ msgid "Error: could not parse hash entries"
+#~ msgstr "Errore: impossibile analizzare le voci hash"
+
+#~ msgid "Verifying {} hash(es) against {}…"
+#~ msgstr "Verifica di {} hash contro {}…"
+
+#~ msgid "Detecting new files…"
+#~ msgstr "Rilevamento nuovi file…"
+
+#~ msgid "Verified {}/{}. Scanning for new files…"
+#~ msgstr "{}/{} verificato/i. Ricerca nuovi file…"
+
+#~ msgid "Verifying… {} / {} files"
+#~ msgstr "Verifica… {} / {} file"
+
+#~ msgid "Done"
+#~ msgstr "Fatto"
+
+#~ msgid "Done. Passed: {}  Failed: {}  Missing: {}  New: {}"
+#~ msgstr "Fatto. Superati: {}  Falliti: {}  Mancanti: {}  Nuovi: {}"
+
+#~ msgid "Error: {}"
+#~ msgstr "Errore: {}"
+
+#~ msgid "Cancelled. {} file(s) verified."
+#~ msgstr "Annullato. {} file verificato/i."
+
+#~ msgid "(pasted content)"
+#~ msgstr "(contenuto incollato)"
+
+#~ msgid "hash-turbo verification report"
+#~ msgstr "Rapporto di verifica hash-turbo"
+
+#~ msgid "Date: {}"
+#~ msgstr "Data: {}"
+
+#~ msgid "Total: {}  Passed: {}  Failed: {}  Missing: {}  New: {}"
+#~ msgstr "Totale: {}  Superati: {}  Falliti: {}  Mancanti: {}  Nuovi: {}"
+
+#~ msgid "New files (no hash entry):"
+#~ msgstr "Nuovi file (nessuna voce hash):"
+
+#~ msgid "Report write failed: {}"
+#~ msgstr "Scrittura del rapporto fallita: {}"
+
+#~ msgid "Format:"
+#~ msgstr "Formato:"
+
+#~ msgid "Recursive"
+#~ msgstr "Ricorsivo"
+
+#~ msgid "Include files in subfolders"
+#~ msgstr "Includi file nelle sottocartelle"
+
+#~ msgid "Sanitize"
+#~ msgstr "Normalizza"
+
+#~ msgid ""
+#~ "hash-turbo — Cross-platform file hash management tool.\n"
+#~ "\n"
+#~ "Hash tab: select a folder, choose an algorithm, and generate hashes.\n"
+#~ "Verify tab: load a hash file or paste entries, then verify files.\n"
+#~ "Sanitize tab: load a hash manifest, transform format, paths, and sorting.\n"
+#~ "Settings tab: configure exclude patterns and preferences."
+#~ msgstr ""
+#~ "hash-turbo — Strumento multipiattaforma per la gestione degli hash dei file.\n"
+#~ "\n"
+#~ "Scheda Hash: selezionare una cartella, scegliere un algoritmo e generare gli hash.\n"
+#~ "Scheda Verifica: caricare un file hash o incollare le voci, quindi verificare i file.\n"
+#~ "Scheda Normalizza: caricare un manifesto hash, trasformare formato, percorsi e ordinamento.\n"
+#~ "Scheda Impostazioni: configurare i pattern di esclusione e le preferenze."
+
+#~ msgid "Save As"
+#~ msgstr "Salva con nome"
+
+#~ msgid "Transform Options"
+#~ msgstr "Opzioni di trasformazione"
+
+#~ msgid "Output format:"
+#~ msgstr "Formato di output:"
+
+#~ msgid "Path separator:"
+#~ msgstr "Separatore di percorso:"
+
+#~ msgid "Keep original"
+#~ msgstr "Mantieni originale"
+
+#~ msgid "Strip prefix:"
+#~ msgstr "Rimuovi prefisso:"
+
+#~ msgid "/path/to/strip"
+#~ msgstr "/percorso/da/rimuovere"
+
+#~ msgid "Hash case:"
+#~ msgstr "Maiuscole/minuscole hash:"
+
+#~ msgid "Lowercase"
+#~ msgstr "Minuscole"
+
+#~ msgid "Uppercase"
+#~ msgstr "Maiuscole"
+
+#~ msgid "Sort:"
+#~ msgstr "Ordinamento:"
+
+#~ msgid "None"
+#~ msgstr "Nessuno"
+
+#~ msgid "By path"
+#~ msgstr "Per percorso"
+
+#~ msgid "By hash"
+#~ msgstr "Per hash"
+
+#~ msgid "Deduplicate"
+#~ msgstr "Deduplica"
+
+#~ msgid "Line ending:"
+#~ msgstr "Fine riga:"
+
+#~ msgid "System"
+#~ msgstr "Sistema"
+
+#~ msgid "Transform"
+#~ msgstr "Trasforma"
+
+#~ msgid "Save Transformed Hash File"
+#~ msgstr "Salva file hash trasformato"
+
+#~ msgid "Accept and fix irregular whitespace (tabs, multiple spaces) between hash and path in GNU format"
+#~ msgstr "Accettare e correggere la spaziatura irregolare (tabulazioni, spazi multipli) tra hash e percorso nel formato GNU"
+
+#~ msgid "Accept tabs and multiple spaces between hash and path in GNU format"
+#~ msgstr "Accettare tabulazioni e spazi multipli tra hash e percorso nel formato GNU"
+

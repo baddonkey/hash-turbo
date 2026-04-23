@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hash-turbo"
+dynamic = ["version"]
+description = "Cross-platform file hash management tool with CLI and GUI"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = [
+    "click>=8.1",
+]
+
+[project.optional-dependencies]
+gui = [
+    "PySide6>=6.5",
+    "pyobjc-framework-Cocoa>=9.0; sys_platform == 'darwin'",
+]
+dev = [
+    "PySide6>=6.5",
+    "pyobjc-framework-Cocoa>=9.0; sys_platform == 'darwin'",
+    "pytest>=7.4",
+    "pytest-qt>=4.2",
+    "mypy>=1.5",
+    "pyinstaller>=6.0",
+]
+
+[project.scripts]
+hash-turbo = "hash_turbo.cli.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "hash_turbo.__version__"}
+
+[tool.mypy]
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+qt_api = "pyside6"
+markers = [
+    "stress: slow stress tests (~1 GB temp data, opt-in via --stress)",
+]

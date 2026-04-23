@@ -1,0 +1,453 @@
+# Translations template for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-04-19 06:53+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+
+#: QML
+msgid "%1 entries loaded (showing first 200 lines)"
+msgstr ""
+
+
+#: QML
+msgid "%1 item(s)"
+msgstr ""
+
+
+#: QML
+msgid "&About"
+msgstr ""
+
+
+#: QML
+msgid "&File"
+msgstr ""
+
+
+#: QML
+msgid "&Help"
+msgstr ""
+
+
+#: QML
+msgid "&User Manual"
+msgstr ""
+
+
+#: QML
+msgid "About hash-turbo"
+msgstr ""
+
+
+#: QML
+msgid "Actions"
+msgstr ""
+
+
+#: QML
+msgid "Add Files"
+msgstr ""
+
+
+#: QML
+msgid "Add Folder"
+msgstr ""
+
+
+#: QML
+msgid "Algorithm"
+msgstr ""
+
+
+#: QML
+msgid "Appearance"
+msgstr ""
+
+
+#: QML
+msgid "Auto-detected"
+msgstr ""
+
+
+#: QML
+msgid "Auto-filled from source file"
+msgstr ""
+
+
+#: QML
+msgid "Base dir"
+msgstr ""
+
+
+#: QML
+msgid "Binary mode only"
+msgstr ""
+
+
+#: QML
+msgid "Browse…"
+msgstr ""
+
+
+#: QML
+msgid "By hash"
+msgstr ""
+
+
+#: QML
+msgid "By path"
+msgstr ""
+
+
+#: QML
+msgid "CR (Classic Mac)"
+msgstr ""
+
+
+#: QML
+msgid "CRLF (Windows)"
+msgstr ""
+
+
+#: QML
+msgid "Cancel"
+msgstr ""
+
+
+#: QML
+msgid "Clear"
+msgstr ""
+
+
+#: QML
+msgid "Custom base dir"
+msgstr ""
+
+
+#: QML
+msgid "Deduplicate"
+msgstr ""
+
+
+#: QML
+msgid "Default Algorithm:"
+msgstr ""
+
+
+#: QML
+msgid "Defaults"
+msgstr ""
+
+
+#: QML
+msgid "Defaults to hash file parent folder"
+msgstr ""
+
+
+#: QML
+msgid "Detect new files"
+msgstr ""
+
+
+#: QML
+msgid "Drop files or folders here"
+msgstr ""
+
+
+#: QML
+msgid "Drop hash file here"
+msgstr ""
+
+
+#: QML
+msgid "E&xit"
+msgstr ""
+
+
+#: QML
+msgid "Exclude Patterns"
+msgstr ""
+
+
+#: QML
+msgid "Filesystem"
+msgstr ""
+
+
+#: QML
+msgid "Flexible whitespace"
+msgstr ""
+
+
+#: QML
+msgid "Format"
+msgstr ""
+
+
+#: QML
+msgid "Hash"
+msgstr ""
+
+
+#: QML
+msgid "Hash case:"
+msgstr ""
+
+
+#: QML
+msgid "Input"
+msgstr ""
+
+
+#: QML
+msgid "Keep original"
+msgstr ""
+
+
+#: QML
+msgid "LF (Linux/macOS)"
+msgstr ""
+
+
+#: QML
+msgid "Language"
+msgstr ""
+
+
+#: QML
+msgid "Line ending:"
+msgstr ""
+
+
+#: QML
+msgid "Load Hash File"
+msgstr ""
+
+
+#: QML
+msgid "Log"
+msgstr ""
+
+
+#: QML
+msgid "Lowercase"
+msgstr ""
+
+
+#: QML
+msgid "None"
+msgstr ""
+
+
+#: QML
+msgid "Normalize whitespace"
+msgstr ""
+
+
+#: QML
+msgid "One pattern per line. Prefix with re: for regex."
+msgstr ""
+
+
+#: QML
+msgid "Open"
+msgstr ""
+
+
+#: QML
+msgid "Open Hash File"
+msgstr ""
+
+
+#: QML
+msgid "Open Report"
+msgstr ""
+
+
+#: QML
+msgid "Open output file"
+msgstr ""
+
+
+#: QML
+msgid "Output"
+msgstr ""
+
+
+#: QML
+msgid "Output Format:"
+msgstr ""
+
+
+#: QML
+msgid "Output Hash File"
+msgstr ""
+
+
+#: QML
+msgid "Output file:"
+msgstr ""
+
+
+#: QML
+msgid "Output folder"
+msgstr ""
+
+
+#: QML
+msgid "Output format:"
+msgstr ""
+
+
+#: QML
+msgid "POSIX (/)"
+msgstr ""
+
+
+#: QML
+msgid "Parameters"
+msgstr ""
+
+
+#: QML
+msgid "Paste hash entries here, or load a hash file..."
+msgstr ""
+
+
+#: QML
+msgid "Path Mode:"
+msgstr ""
+
+
+#: QML
+msgid "Path separator:"
+msgstr ""
+
+
+#: QML
+msgid "Recursive"
+msgstr ""
+
+
+#: QML
+msgid "Relative paths"
+msgstr ""
+
+
+#: QML
+msgid "Reload file from disk"
+msgstr ""
+
+
+#: QML
+msgid "Restart the application for language changes to take full effect."
+msgstr ""
+
+
+#: QML
+msgid "Result"
+msgstr ""
+
+
+#: QML
+msgid "Sanitize"
+msgstr ""
+
+
+#: QML
+msgid "Select Base Directory"
+msgstr ""
+
+
+#: QML
+msgid "Select Files"
+msgstr ""
+
+
+#: QML
+msgid "Select Folder"
+msgstr ""
+
+
+#: QML
+msgid "Select Output Directory"
+msgstr ""
+
+
+#: QML
+msgid "Select Output File"
+msgstr ""
+
+
+#: QML
+msgid "Settings"
+msgstr ""
+
+
+#: QML
+msgid "Sort:"
+msgstr ""
+
+
+#: QML
+msgid "Source"
+msgstr ""
+
+
+#: QML
+msgid "Strip prefix:"
+msgstr ""
+
+
+#: QML
+msgid "System"
+msgstr ""
+
+
+#: QML
+msgid "Theme:"
+msgstr ""
+
+
+#: QML
+msgid "Transform"
+msgstr ""
+
+
+#: QML
+msgid "Transform results will appear here…"
+msgstr ""
+
+
+#: QML
+msgid "Uppercase"
+msgstr ""
+
+
+#: QML
+msgid "Verify"
+msgstr ""
+
+
+#: QML
+msgid "Windows (\\)"
+msgstr ""
+
+
+#: QML
+msgid "…"
+msgstr ""

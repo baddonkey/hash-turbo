@@ -1,0 +1,723 @@
+# Romansh translations for hash-turbo.
+# Copyright (C) 2026 hash-turbo
+# This file is distributed under the same license as the hash-turbo project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hash-turbo 1.0.2\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-04-19 06:53+0200\n"
+"PO-Revision-Date: 2026-04-11 13:21+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: rm\n"
+"Language-Team: rm <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: QML
+msgid "%1 entries loaded (showing first 200 lines)"
+msgstr "%1 entradas chargiadas (emprimas 200 lingias mussadas)"
+
+#: QML
+msgid "%1 item(s)"
+msgstr "%1 element(s)"
+
+#: QML
+msgid "&About"
+msgstr "&Davart"
+
+#: QML
+msgid "&File"
+msgstr "&Datoteca"
+
+#: QML
+msgid "&Help"
+msgstr "&Agid"
+
+#: QML
+msgid "&User Manual"
+msgstr "&Manual d'utilisader"
+
+#: QML
+msgid "About hash-turbo"
+msgstr "Davart hash-turbo"
+
+#: QML
+msgid "Actions"
+msgstr "Acziuns"
+
+#: QML
+msgid "Add Files"
+msgstr "Agiuntar datotecas"
+
+#: QML
+msgid "Add Folder"
+msgstr "Agiuntar ordinatur"
+
+#: QML
+msgid "Algorithm"
+msgstr "Algoritmus"
+
+#: QML
+msgid "Appearance"
+msgstr "Aspet"
+
+#: QML
+msgid "Auto-detected"
+msgstr "Reconuschì automaticamain"
+
+#: QML
+msgid "Auto-filled from source file"
+msgstr "Emplì automaticamain da la datoteca funtauna"
+
+#: QML
+msgid "Base dir"
+msgstr "Dir. basa"
+
+#: QML
+msgid "Binary mode only"
+msgstr "Mo modus binar"
+
+#: QML
+msgid "Browse…"
+msgstr "Tschertgar…"
+
+#: QML
+msgid "By hash"
+msgstr "Tenor hash"
+
+#: QML
+msgid "By path"
+msgstr "Tenor senda"
+
+#: QML
+msgid "CR (Classic Mac)"
+msgstr "CR (Mac classic)"
+
+#: QML
+msgid "CRLF (Windows)"
+msgstr "CRLF (Windows)"
+
+#: QML
+msgid "Cancel"
+msgstr "Interrumper"
+
+#: QML
+msgid "Clear"
+msgstr "Stizzar"
+
+#: QML
+msgid "Custom base dir"
+msgstr "Dir. da basa persunala"
+
+#: QML
+msgid "Deduplicate"
+msgstr "Deduplicar"
+
+#: QML
+msgid "Default Algorithm:"
+msgstr "Algoritmus da standard:"
+
+#: QML
+msgid "Defaults"
+msgstr "Valurs predefinidas"
+
+#: QML
+msgid "Defaults to hash file parent folder"
+msgstr "Standard: ordinatur superiur da la datoteca da hash"
+
+#: QML
+msgid "Detect new files"
+msgstr "Reconuscher novas datotecas"
+
+#: QML
+msgid "Drop files or folders here"
+msgstr "Tragliar datotecas u ordinaturs qua"
+
+#: QML
+msgid "Drop hash file here"
+msgstr "Tragliar qua ina datoteca da hash"
+
+#: QML
+msgid "E&xit"
+msgstr "&Serrar"
+
+#: QML
+msgid "Exclude Patterns"
+msgstr "Musters d'exclusiun"
+
+#: QML
+msgid "Filesystem"
+msgstr "Sistema da datotecas"
+
+#: QML
+msgid "Flexible whitespace"
+msgstr "Spazis flexibels"
+
+#: QML
+msgid "Format"
+msgstr "Format"
+
+#: QML
+msgid "Hash"
+msgstr "Hash"
+
+#: QML
+msgid "Hash case:"
+msgstr "Scripziun gronda/pitschna:"
+
+#: QML
+msgid "Input"
+msgstr "Endataziun"
+
+#: QML
+msgid "Keep original"
+msgstr "Mantegnair l'original"
+
+#: QML
+msgid "LF (Linux/macOS)"
+msgstr "LF (Linux/macOS)"
+
+#: QML
+msgid "Language"
+msgstr "Lingua"
+
+#: QML
+msgid "Line ending:"
+msgstr "Fin da lingia:"
+
+#: QML
+msgid "Load Hash File"
+msgstr "Chargiar datoteca da hash"
+
+#: QML
+msgid "Log"
+msgstr "Protocol"
+
+#: QML
+msgid "Lowercase"
+msgstr "Bustabs pitschens"
+
+#: QML
+msgid "None"
+msgstr "Nagin"
+
+#: QML
+msgid "Normalize whitespace"
+msgstr "Normalisar spazis"
+
+#: QML
+msgid "One pattern per line. Prefix with re: for regex."
+msgstr "In muster per lingia. Prefix re: per expressiuns regularas."
+
+#: QML
+msgid "Open"
+msgstr "Avrir"
+
+#: QML
+msgid "Open Hash File"
+msgstr "Avrir datoteca da hash"
+
+#: QML
+msgid "Open Report"
+msgstr "Avrir il rapport"
+
+#: QML
+msgid "Open output file"
+msgstr "Avrir la datoteca da sortida"
+
+#: QML
+msgid "Output"
+msgstr "Sortida"
+
+#: QML
+msgid "Output Format:"
+msgstr "Format da sortida:"
+
+#: QML
+msgid "Output Hash File"
+msgstr "Memorisar datoteca da hash"
+
+#: QML
+msgid "Output file:"
+msgstr "Datoteca da sortida:"
+
+#: QML
+msgid "Output folder"
+msgstr "Ordinatur da sortida"
+
+#: QML
+msgid "Output format:"
+msgstr "Format da sortida:"
+
+#: QML
+msgid "POSIX (/)"
+msgstr "POSIX (/)"
+
+#: QML
+msgid "Parameters"
+msgstr "Parameters"
+
+#: QML
+msgid "Paste hash entries here, or load a hash file..."
+msgstr "Encollar entradas da hash qua u chargiar ina datoteca…"
+
+#: QML
+msgid "Path Mode:"
+msgstr "Modus da senda:"
+
+#: QML
+msgid "Path separator:"
+msgstr "Separatur da senda:"
+
+#: QML
+msgid "Recursive"
+msgstr "Recursiv"
+
+#: QML
+msgid "Relative paths"
+msgstr "Sendas relativas"
+
+#: QML
+msgid "Reload file from disk"
+msgstr "Rechargiar la datoteca dal disc"
+
+#: QML
+msgid "Restart the application for language changes to take full effect."
+msgstr "Reaviar l'applicaziun per che la midada da lingua vegnia effectiva."
+
+#: QML
+msgid "Result"
+msgstr "Resultat"
+
+#: QML
+msgid "Sanitize"
+msgstr "Purifitgar"
+
+#: QML
+msgid "Select Base Directory"
+msgstr "Tscherner l'ordinatur da basa"
+
+#: QML
+msgid "Select Files"
+msgstr "Tscherner datotecas"
+
+#: QML
+msgid "Select Folder"
+msgstr "Tscherner ordinatur"
+
+#: QML
+msgid "Select Output Directory"
+msgstr "Tscherner l'ordinatur da sortida"
+
+#: QML
+msgid "Select Output File"
+msgstr "Tscherner datoteca da sortida"
+
+#: QML
+msgid "Settings"
+msgstr "Parameters"
+
+#: QML
+msgid "Sort:"
+msgstr "Sortar:"
+
+#: QML
+msgid "Source"
+msgstr "Funtauna"
+
+#: QML
+msgid "Strip prefix:"
+msgstr "Allontanar prefix:"
+
+#: QML
+msgid "System"
+msgstr "Sistema"
+
+#: QML
+msgid "Theme:"
+msgstr "Design:"
+
+#: QML
+msgid "Transform"
+msgstr "Transformar"
+
+#: QML
+msgid "Transform results will appear here…"
+msgstr "Resultats da la transformaziun apparan qua…"
+
+#: QML
+msgid "Uppercase"
+msgstr "Bustabs gronds"
+
+#: QML
+msgid "Verify"
+msgstr "Verifitgar"
+
+#: QML
+msgid "Windows (\\)"
+msgstr "Windows (\\)"
+
+#: QML
+msgid "…"
+msgstr "…"
+
+#~ msgid "Restart"
+#~ msgstr "Reaviar"
+
+#~ msgid "Add Files"
+#~ msgstr "Agiuntar datotecas"
+
+#~ msgid "Add Folder"
+#~ msgstr "Agiuntar ordinatur"
+
+#~ msgid "Algorithm:"
+#~ msgstr "Algoritmus:"
+
+#~ msgid "Hash"
+#~ msgstr "Hash"
+
+#~ msgid "Relative paths"
+#~ msgstr "Sendas relativas"
+
+#~ msgid "Base dir:"
+#~ msgstr "Dir. basa:"
+
+#~ msgid "Auto-detected from first added path"
+#~ msgstr "Reconuschì automaticamain da l'emprima senda agiuntada"
+
+#~ msgid "Browse"
+#~ msgstr "Tschertgar"
+
+#~ msgid "Pending files: {}"
+#~ msgstr "Datotecas en spetga: {}"
+
+#~ msgid "Clear"
+#~ msgstr "Stizzar"
+
+#~ msgid "Cancel"
+#~ msgstr "Interrumper"
+
+#~ msgid "Output file:"
+#~ msgstr "Datoteca da sortida:"
+
+#~ msgid "Open"
+#~ msgstr "Avrir"
+
+#~ msgid "Open the output file with the default application"
+#~ msgstr "Avrir la datoteca da sortida cun l'applicaziun da standard"
+
+#~ msgid "Select Files"
+#~ msgstr "Tscherner datotecas"
+
+#~ msgid "Select Folder"
+#~ msgstr "Tscherner ordinatur"
+
+#~ msgid "Select Base Directory"
+#~ msgstr "Tscherner l'ordinatur da basa"
+
+#~ msgid "Scanning files…"
+#~ msgstr "Tschertgar datotecas…"
+
+#~ msgid "Scanning directory…"
+#~ msgstr "Examinar l'ordinatur…"
+
+#~ msgid "Hashing: %v / %m files"
+#~ msgstr "Hashing: %v / %m datotecas"
+
+#~ msgid "Found {} file(s). Hashing…"
+#~ msgstr "{} datoteca(s) chattada(s). Hashing…"
+
+#~ msgid "Done. {} hash(es) written."
+#~ msgstr "Finì. {} hash(es) scrit(s)."
+
+#~ msgid "Cancelled. {} file(s) completed."
+#~ msgstr "Interrut. {} datoteca(s) elavurada(s)."
+
+#~ msgid "Error"
+#~ msgstr "Errur"
+
+#~ msgid "Output Hash File"
+#~ msgstr "Memorisar datoteca da hash"
+
+#~ msgid "SHA256 (*.sha256);;All Files (*)"
+#~ msgstr "SHA256 (*.sha256);;Tut las datotecas (*)"
+
+#~ msgid "Write Error"
+#~ msgstr "Errur da scriver"
+
+#~ msgid "Verify"
+#~ msgstr "Verifitgar"
+
+#~ msgid "Settings"
+#~ msgstr "Parameters"
+
+#~ msgid "Ready"
+#~ msgstr "Pront"
+
+#~ msgid "&File"
+#~ msgstr "&Datoteca"
+
+#~ msgid "E&xit"
+#~ msgstr "&Serrar"
+
+#~ msgid "&Help"
+#~ msgstr "&Agid"
+
+#~ msgid "&About"
+#~ msgstr "&Davart"
+
+#~ msgid "Help"
+#~ msgstr "Agid"
+
+#~ msgid ""
+#~ "hash-turbo — Cross-platform file hash management tool.\n"
+#~ "\n"
+#~ "Hash tab: select a folder, choose an algorithm, and generate hashes.\n"
+#~ "Verify tab: load a hash file or paste entries, then verify files.\n"
+#~ "Settings tab: configure exclude patterns and preferences."
+#~ msgstr ""
+#~ "hash-turbo — Utensil multiplatforma per administrar hash da datotecas.\n"
+#~ "\n"
+#~ "Tab Hash: tscherner in ordinatur, tscherner in algoritmus e generar hash.\n"
+#~ "Tab Verifitgar: chargiar ina datoteca da hash u encollar entradas, lura verifitgar las datotecas.\n"
+#~ "Tab Parameters: configurar musters d'exclusiun e preferenzas."
+
+#~ msgid "About hash-turbo"
+#~ msgstr "Davart hash-turbo"
+
+#~ msgid ""
+#~ "hash-turbo v{version}\n"
+#~ "\n"
+#~ "Cross-platform file hash management tool\n"
+#~ "with CLI and PySide6 GUI.\n"
+#~ "\n"
+#~ "License: MIT"
+#~ msgstr ""
+#~ "hash-turbo v{version}\n"
+#~ "\n"
+#~ "Utensil multiplatforma per administrar hash da datotecas\n"
+#~ "cun CLI e interfatscha PySide6.\n"
+#~ "\n"
+#~ "Licenzia: MIT"
+
+#~ msgid "Defaults"
+#~ msgstr "Valurs predefinidas"
+
+#~ msgid "Default Algorithm:"
+#~ msgstr "Algoritmus da standard:"
+
+#~ msgid "Path Mode:"
+#~ msgstr "Modus da senda:"
+
+#~ msgid "Output Format:"
+#~ msgstr "Format da sortida:"
+
+#~ msgid "Appearance"
+#~ msgstr "Aspet"
+
+#~ msgid "Theme:"
+#~ msgstr "Design:"
+
+#~ msgid "Language"
+#~ msgstr "Lingua"
+
+#~ msgid "Language:"
+#~ msgstr "Lingua:"
+
+#~ msgid "Restart the application for language changes to take full effect."
+#~ msgstr "Reaviar l'applicaziun per che la midada da lingua vegnia effectiva."
+
+#~ msgid "Exclude Patterns"
+#~ msgstr "Musters d'exclusiun"
+
+#~ msgid "One pattern per line. Prefix with re: for regex."
+#~ msgstr "In muster per lingia. Prefix re: per expressiuns regularas."
+
+#~ msgid "Load Hash File"
+#~ msgstr "Chargiar datoteca da hash"
+
+#~ msgid "Detect new files"
+#~ msgstr "Reconuscher novas datotecas"
+
+#~ msgid "Report files in the folder that have no hash entry"
+#~ msgstr "Annunziar datotecas en l'ordinatur che n'han nagina entrada da hash"
+
+#~ msgid "Custom base dir"
+#~ msgstr "Dir. da basa persunala"
+
+#~ msgid "Override the base directory used to resolve relative paths in the hash file"
+#~ msgstr "Surscriver l'ordinatur da basa utilisà per resolver sendas relativas en la datoteca da hash"
+
+#~ msgid "Auto-detected from hash file location"
+#~ msgstr "Reconuschì automaticamain da la posiziun da la datoteca da hash"
+
+#~ msgid "Output folder:"
+#~ msgstr "Ordinatur da sortida:"
+
+#~ msgid "Defaults to hash file parent folder"
+#~ msgstr "Standard: ordinatur superiur da la datoteca da hash"
+
+#~ msgid "Drop a hash file here, or paste hash entries (GNU or BSD format)..."
+#~ msgstr "Tragliar qua ina datoteca da hash u encollar entradas (format GNU u BSD)…"
+
+#~ msgid "Verifying: %v / %m files"
+#~ msgstr "Verificaziun: %v / %m datotecas"
+
+#~ msgid "Open Report"
+#~ msgstr "Avrir il rapport"
+
+#~ msgid "Open the verification report log"
+#~ msgstr "Avrir il protocol dal rapport da verificaziun"
+
+#~ msgid "Select Output Directory"
+#~ msgstr "Tscherner l'ordinatur da sortida"
+
+#~ msgid "Open Hash File"
+#~ msgstr "Avrir datoteca da hash"
+
+#~ msgid "Hash Files (*.sha256 *.md5 *.sha1 *.sha512);;All Files (*)"
+#~ msgstr "Datotecas da hash (*.sha256 *.md5 *.sha1 *.sha512);;Tut las datotecas (*)"
+
+#~ msgid "Hash file: {}"
+#~ msgstr "Datoteca da hash: {}"
+
+#~ msgid "Error: could not parse hash entries"
+#~ msgstr "Errur: impussibel dad analisar las entradas da hash"
+
+#~ msgid "Verifying {} hash(es) against {}…"
+#~ msgstr "Verificaziun da {} hash(es) cunter {}…"
+
+#~ msgid "Detecting new files…"
+#~ msgstr "Reconuscher novas datotecas…"
+
+#~ msgid "Verified {}/{}. Scanning for new files…"
+#~ msgstr "{}/{} verifitgà. Tschertga da novas datotecas…"
+
+#~ msgid "Verifying… {} / {} files"
+#~ msgstr "Verificaziun… {} / {} datotecas"
+
+#~ msgid "Done"
+#~ msgstr "Finì"
+
+#~ msgid "Done. Passed: {}  Failed: {}  Missing: {}  New: {}"
+#~ msgstr "Finì. Reussì: {}  Betg reussì: {}  Mancant: {}  Nov: {}"
+
+#~ msgid "Error: {}"
+#~ msgstr "Errur: {}"
+
+#~ msgid "Cancelled. {} file(s) verified."
+#~ msgstr "Interrut. {} datoteca(s) verifitgada(s)."
+
+#~ msgid "(pasted content)"
+#~ msgstr "(cuntegn encolà)"
+
+#~ msgid "hash-turbo verification report"
+#~ msgstr "Rapport da verificaziun hash-turbo"
+
+#~ msgid "Date: {}"
+#~ msgstr "Data: {}"
+
+#~ msgid "Total: {}  Passed: {}  Failed: {}  Missing: {}  New: {}"
+#~ msgstr "Total: {}  Reussì: {}  Betg reussì: {}  Mancant: {}  Nov: {}"
+
+#~ msgid "New files (no hash entry):"
+#~ msgstr "Novas datotecas (nagina entrada da hash):"
+
+#~ msgid "Report write failed: {}"
+#~ msgstr "Errur cun scriver il rapport: {}"
+
+#~ msgid "Format:"
+#~ msgstr "Format:"
+
+#~ msgid "Recursive"
+#~ msgstr "Recursiv"
+
+#~ msgid "Include files in subfolders"
+#~ msgstr "Includer datotecas en sutordinaturs"
+
+#~ msgid "Sanitize"
+#~ msgstr "Purifitgar"
+
+#~ msgid ""
+#~ "hash-turbo — Cross-platform file hash management tool.\n"
+#~ "\n"
+#~ "Hash tab: select a folder, choose an algorithm, and generate hashes.\n"
+#~ "Verify tab: load a hash file or paste entries, then verify files.\n"
+#~ "Sanitize tab: load a hash manifest, transform format, paths, and sorting.\n"
+#~ "Settings tab: configure exclude patterns and preferences."
+#~ msgstr ""
+#~ "hash-turbo — Utensil multiplatforma per administrar hash da datotecas.\n"
+#~ "\n"
+#~ "Tab Hash: tscherner in ordinatur, tscherner in algoritmus e generar hash.\n"
+#~ "Tab Verifitgar: chargiar ina datoteca da hash u encollar entradas, lura verifitgar las datotecas.\n"
+#~ "Tab Purifitgar: chargiar in manifest da hash, transformar il format, las sendas e la sortida.\n"
+#~ "Tab Parameters: configurar musters d'exclusiun e preferenzas."
+
+#~ msgid "Save As"
+#~ msgstr "Memorisar sco"
+
+#~ msgid "Transform Options"
+#~ msgstr "Opziuns da transformaziun"
+
+#~ msgid "Output format:"
+#~ msgstr "Format da sortida:"
+
+#~ msgid "Path separator:"
+#~ msgstr "Separatur da senda:"
+
+#~ msgid "Keep original"
+#~ msgstr "Mantegnair l'original"
+
+#~ msgid "Strip prefix:"
+#~ msgstr "Allontanar prefix:"
+
+#~ msgid "/path/to/strip"
+#~ msgstr "/senda/dad/allontanar"
+
+#~ msgid "Hash case:"
+#~ msgstr "Scripziun gronda/pitschna:"
+
+#~ msgid "Lowercase"
+#~ msgstr "Bustabs pitschens"
+
+#~ msgid "Uppercase"
+#~ msgstr "Bustabs gronds"
+
+#~ msgid "Sort:"
+#~ msgstr "Sortar:"
+
+#~ msgid "None"
+#~ msgstr "Nagin"
+
+#~ msgid "By path"
+#~ msgstr "Tenor senda"
+
+#~ msgid "By hash"
+#~ msgstr "Tenor hash"
+
+#~ msgid "Deduplicate"
+#~ msgstr "Deduplicar"
+
+#~ msgid "Line ending:"
+#~ msgstr "Fin da lingia:"
+
+#~ msgid "System"
+#~ msgstr "Sistema"
+
+#~ msgid "Transform"
+#~ msgstr "Transformar"
+
+#~ msgid "Save Transformed Hash File"
+#~ msgstr "Memorisar la datoteca da hash transformada"
+
+#~ msgid "Accept and fix irregular whitespace (tabs, multiple spaces) between hash and path in GNU format"
+#~ msgstr "Acceptar e curregir spazis irregulars (tabulaturas, plirs spazis) tranter hash e senda en il format GNU"
+
+#~ msgid "Accept tabs and multiple spaces between hash and path in GNU format"
+#~ msgstr "Acceptar tabulaturas e plirs spazis tranter hash e senda en il format GNU"
+
