@@ -2,8 +2,7 @@
 # build_macos.sh — Build a self-contained macOS distribution for hash-turbo.
 #
 # Produces:
-#   dist/hash-turbo.app          — double-click GUI app
-#   dist/hash-turbo              — standalone CLI binary
+#   dist/hash-turbo.app          — unified app bundle (CLI + GUI)
 #   dist/hash-turbo-<version>.dmg — distributable disk image
 #
 # Usage:
@@ -76,7 +75,6 @@ sign_item() {
 }
 
 sign_item "dist/hash-turbo.app"
-sign_item "dist/hash-turbo"
 echo "  Code signing done."
 
 # ── Create DMG ────────────────────────────────────────────────────────────────
@@ -85,7 +83,6 @@ DMG_STAGING="$(mktemp -d)/dmg-staging"
 mkdir -p "$DMG_STAGING"
 
 cp -R "dist/hash-turbo.app" "$DMG_STAGING/"
-cp    "dist/hash-turbo"      "$DMG_STAGING/hash-turbo-cli"
 
 # Symlink to /Applications for drag-and-drop install
 ln -s /Applications "$DMG_STAGING/Applications"
@@ -94,9 +91,9 @@ ln -s /Applications "$DMG_STAGING/Applications"
 cat > "$DMG_STAGING/README.txt" <<'EOF'
 hash-turbo — Cross-platform file hash management tool
 
-• Drag hash-turbo.app into Applications to install the GUI.
-• For the CLI, copy hash-turbo-cli to /usr/local/bin:
-    sudo cp hash-turbo-cli /usr/local/bin/hash-turbo
+• Drag hash-turbo.app into Applications to install.
+• For CLI access, symlink the binary inside the app:
+    sudo ln -sf /Applications/hash-turbo.app/Contents/MacOS/hash-turbo /usr/local/bin/hash-turbo
 
 Full documentation: https://github.com/your-org/hash-turbo
 EOF
@@ -113,5 +110,4 @@ hdiutil create \
 echo ""
 echo "Done! Artifacts:"
 echo "  dist/hash-turbo.app"
-echo "  dist/hash-turbo"
 echo "  dist/$DMG_NAME"
