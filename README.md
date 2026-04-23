@@ -110,3 +110,9 @@ src/hash_turbo/
 ├── i18n/           # Internationalization (gettext, .po/.mo)
 └── infra/          # Infrastructure (file scanning, parallelism)
 ```
+
+## License
+
+hash-turbo is released under the [MIT License](LICENSE).
+
+Third-party dependencies and their licenses are listed in [THIRD-PARTY-LICENSES.md](THIRD-PARTY-LICENSES.md).
