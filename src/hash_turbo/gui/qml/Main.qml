@@ -74,12 +74,18 @@ ApplicationWindow {
 
             TextArea {
                 text: thirdPartyLicensesText
+                textFormat: TextEdit.MarkdownText
                 readOnly: true
-                font.family: window.monoFont
-                font.pixelSize: 12
+                font.pixelSize: 13
                 wrapMode: TextArea.Wrap
                 selectByMouse: true
                 background: null
+                onLinkActivated: (link) => Qt.openUrlExternally(link)
+                MouseArea {
+                    anchors.fill: parent
+                    acceptedButtons: Qt.NoButton
+                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                }
             }
         }
     }

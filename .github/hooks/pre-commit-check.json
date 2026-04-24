@@ -3,7 +3,7 @@
     "PostToolUse": [
       {
         "type": "command",
-        "command": "python scripts/hook_pre_commit_check.py",
+        "command": "python3 scripts/hook_pre_commit_check.py",
         "timeout": 60
       }
     ]

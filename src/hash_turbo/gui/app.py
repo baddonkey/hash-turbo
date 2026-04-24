@@ -125,7 +125,7 @@ class GuiApp:
 
     @staticmethod
     def _create_engine() -> tuple[
-        "QGuiApplication", "QQmlApplicationEngine", dict[str, object],
+        "QApplication", "QQmlApplicationEngine", dict[str, object],
     ]:
         """Build the QML engine and view models without entering the event loop.
 
@@ -133,9 +133,10 @@ class GuiApp:
         property names to their view-model instances.
         """
         from PySide6.QtCore import QUrl
-        from PySide6.QtGui import QGuiApplication, QIcon
+        from PySide6.QtGui import QIcon
         from PySide6.QtQml import QQmlApplicationEngine
         from PySide6.QtQuickControls2 import QQuickStyle
+        from PySide6.QtWidgets import QApplication
 
         from hash_turbo import __version__
         from hash_turbo.gui.gettext_translator import GettextTranslator
@@ -144,9 +145,9 @@ class GuiApp:
         from hash_turbo.gui.settings_model import SettingsModel
         from hash_turbo.gui.verify_view_model import VerifyViewModel
 
-        app = QGuiApplication.instance()
+        app = QApplication.instance()
         if app is None:
-            app = QGuiApplication(sys.argv)
+            app = QApplication(sys.argv)
 
         # Install gettext-backed translator so QML qsTr() resolves via gettext
         translator = GettextTranslator(app)
@@ -163,6 +164,9 @@ class GuiApp:
             app.setWindowIcon(QIcon(str(ico_path)))
         elif png_path.exists():
             app.setWindowIcon(QIcon(str(png_path)))
+
+        # Set macOS dock icon early so it appears as soon as the app launches.
+        _set_macos_dock_icon(png_path)
 
         QQuickStyle.setStyle("Material")
 
@@ -240,12 +244,10 @@ class GuiApp:
 
         assets_dir = Path(__file__).parent.parent / "assets"
         ico_path = assets_dir / "icon.ico"
-        png_path = assets_dir / "icon.png"
 
         root_window = engine.rootObjects()[0]
         if sys.platform == "win32":
             _set_windows_taskbar_icon(root_window.winId(), ico_path)
-        _set_macos_dock_icon(png_path)
         sys.exit(app.exec())
 
 

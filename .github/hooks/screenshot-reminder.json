@@ -3,7 +3,7 @@
     "PostToolUse": [
       {
         "type": "command",
-        "command": "python scripts/hook_screenshot_reminder.py",
+        "command": "python3 scripts/hook_screenshot_reminder.py",
         "timeout": 5
       }
     ]
