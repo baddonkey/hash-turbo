@@ -23,6 +23,7 @@ a = Analysis(
         ('src/hash_turbo/assets/icon.png', 'hash_turbo/assets'),
         ('src/hash_turbo/i18n/locales', 'hash_turbo/i18n/locales'),
         ('src/hash_turbo/gui/qml', 'hash_turbo/gui/qml'),
+        ('THIRD-PARTY-LICENSES.md', 'hash_turbo/assets'),
         *_extra_datas,
     ],
     hiddenimports=[

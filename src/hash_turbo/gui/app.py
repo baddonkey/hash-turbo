@@ -198,6 +198,19 @@ class GuiApp:
             QUrl.fromLocalFile(str(manual_path)).toString() if manual_path.exists() else "",
         )
 
+        # Third-party licenses text — bundled beside assets in frozen builds,
+        # or read from the project root in dev mode.
+        _licenses_candidates = [
+            assets_dir / "THIRD-PARTY-LICENSES.md",
+            Path(__file__).parent.parent.parent.parent / "THIRD-PARTY-LICENSES.md",
+        ]
+        _licenses_text = ""
+        for _p in _licenses_candidates:
+            if _p.exists():
+                _licenses_text = _p.read_text(encoding="utf-8")
+                break
+        ctx.setContextProperty("thirdPartyLicensesText", _licenses_text)
+
         qml_path = Path(__file__).parent / "qml" / "Main.qml"
         engine.load(QUrl.fromLocalFile(str(qml_path)))
 

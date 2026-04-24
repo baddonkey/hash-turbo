@@ -60,6 +60,30 @@ ApplicationWindow {
         }
     }
 
+    Dialog {
+        id: thirdPartyDialog
+        title: qsTr("Third-Party Licenses")
+        standardButtons: Dialog.Close
+        anchors.centerIn: parent
+        width: Math.min(window.width * 0.85, 820)
+        height: Math.min(window.height * 0.85, 640)
+
+        ScrollView {
+            anchors.fill: parent
+            clip: true
+
+            TextArea {
+                text: thirdPartyLicensesText
+                readOnly: true
+                font.family: window.monoFont
+                font.pixelSize: 12
+                wrapMode: TextArea.Wrap
+                selectByMouse: true
+                background: null
+            }
+        }
+    }
+
     menuBar: MenuBar {
         Menu {
             title: qsTr("&File")
@@ -75,6 +99,10 @@ ApplicationWindow {
                 text: qsTr("&User Manual")
                 enabled: userManualUrl !== ""
                 onTriggered: Qt.openUrlExternally(userManualUrl)
+            }
+            Action {
+                text: qsTr("Third-Party &Licenses")
+                onTriggered: thirdPartyDialog.open()
             }
             Action {
                 text: qsTr("&About")

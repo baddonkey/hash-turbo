@@ -63,6 +63,7 @@ a = Analysis(
         ('src\\hash_turbo\\i18n\\locales', 'hash_turbo\\i18n\\locales'),
         ('src\\hash_turbo\\gui\\qml', 'hash_turbo\\gui\\qml'),
         ('docs\\user-manual.pdf', 'hash_turbo\\assets'),
+        ('THIRD-PARTY-LICENSES.md', 'hash_turbo\\assets'),
     ],
     hiddenimports=[
         'hash_turbo.gui',
