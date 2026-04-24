@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-19 06:53+0200\n"
+"POT-Creation-Date: 2026-04-24 10:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,142 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
+
+#: src/hash_turbo/gui/hash_view_model.py:209
+#: src/hash_turbo/gui/hash_view_model.py:382
+msgid "Scanning files…"
+msgstr ""
+
+#: src/hash_turbo/gui/hash_view_model.py:298
+#: src/hash_turbo/gui/hash_view_model.py:389
+#, python-brace-format
+msgid "Hashing: {} / {} files"
+msgstr ""
+
+#: src/hash_turbo/gui/hash_view_model.py:354
+#, python-brace-format
+msgid "… ({} more lines hidden — see output file) …"
+msgstr ""
+
+#: src/hash_turbo/gui/hash_view_model.py:384
+msgid "Scanning directory…"
+msgstr ""
+
+#: src/hash_turbo/gui/hash_view_model.py:392
+#, python-brace-format
+msgid "Found {} file(s). Hashing…"
+msgstr ""
+
+#: src/hash_turbo/gui/hash_view_model.py:400
+#: src/hash_turbo/gui/sanitize_view_model.py:225
+#: src/hash_turbo/gui/verify_view_model.py:503
+#, python-brace-format
+msgid "Completed in {:.2f}s"
+msgstr ""
+
+#: src/hash_turbo/gui/hash_view_model.py:402
+#, python-brace-format
+msgid "Done. {} hash(es) written."
+msgstr ""
+
+#: src/hash_turbo/gui/hash_view_model.py:413
+#, python-brace-format
+msgid "Cancelled. {} file(s) completed."
+msgstr ""
+
+#: src/hash_turbo/gui/sanitize_view_model.py:228
+#, python-brace-format
+msgid "Done. {} entries."
+msgstr ""
+
+#: src/hash_turbo/gui/sanitize_view_model.py:233
+#: src/hash_turbo/gui/sanitize_view_model.py:234
+#: src/hash_turbo/gui/sanitize_worker.py:87
+#: src/hash_turbo/gui/verify_view_model.py:517
+#, python-brace-format
+msgid "Error: {}"
+msgstr ""
+
+#: src/hash_turbo/gui/sanitize_view_model.py:238
+msgid "Cancelled."
+msgstr ""
+
+#: src/hash_turbo/gui/sanitize_view_model.py:278
+#, python-brace-format
+msgid "Error: could not write to {}"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:262
+msgid "Error: could not parse hash entries"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:294
+#: src/hash_turbo/gui/verify_view_model.py:416
+#, python-brace-format
+msgid "Verifying… {} / {} files"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:302
+#, python-brace-format
+msgid "Verifying {} hash(es) against {}…"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:341
+#, python-brace-format
+msgid "Cancelled. {} file(s) verified."
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:403
+msgid "Detecting new files…"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:411
+#, python-brace-format
+msgid "Verified {}/{}. Scanning for new files…"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:418
+#, python-brace-format
+msgid "{} passed"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:420
+#, python-brace-format
+msgid "{} failed"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:422
+#, python-brace-format
+msgid "{} missing"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:505
+#, python-brace-format
+msgid "Done. Passed: {}  Failed: {}  Missing: {}  New: {}"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:550
+msgid "hash-turbo verification report"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:551
+#, python-brace-format
+msgid "Date: {}"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:552
+#, python-brace-format
+msgid "Hash file: {}"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:554
+#, python-brace-format
+msgid "Total: {}  Passed: {}  Failed: {}  Missing: {}  New: {}"
+msgstr ""
+
+#: src/hash_turbo/gui/verify_view_model.py:571
+msgid "New files (no hash entry):"
+msgstr ""
 
 
 #: QML

@@ -3,7 +3,7 @@
     "PostToolUse": [
       {
         "type": "command",
-        "command": "changed=$(echo \"$COPILOT_TOOL_RESULT\" 2>/dev/null | grep -oE 'src/hash_turbo/gui/qml/[^ \"]+\\.qml' | head -1); if [ -n \"$changed\" ]; then echo '{\"systemMessage\": \"QML file changed — consider regenerating documentation screenshots with @screenshot-docs.\"}'; fi",
+        "command": "python scripts/hook_screenshot_reminder.py",
         "timeout": 5
       }
     ]

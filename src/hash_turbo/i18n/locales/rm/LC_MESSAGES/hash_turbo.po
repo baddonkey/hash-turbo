@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hash-turbo 1.0.2\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-04-19 06:53+0200\n"
+"POT-Creation-Date: 2026-04-24 10:21+0200\n"
 "PO-Revision-Date: 2026-04-11 13:21+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: rm\n"
@@ -17,6 +17,142 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
+
+#: src/hash_turbo/gui/hash_view_model.py:209
+#: src/hash_turbo/gui/hash_view_model.py:382
+msgid "Scanning files…"
+msgstr "Tschertgar datotecas…"
+
+#: src/hash_turbo/gui/hash_view_model.py:298
+#: src/hash_turbo/gui/hash_view_model.py:389
+#, python-brace-format
+msgid "Hashing: {} / {} files"
+msgstr "Hashing: {} / {} datotecas"
+
+#: src/hash_turbo/gui/hash_view_model.py:354
+#, python-brace-format
+msgid "… ({} more lines hidden — see output file) …"
+msgstr ""
+
+#: src/hash_turbo/gui/hash_view_model.py:384
+msgid "Scanning directory…"
+msgstr "Examinar l'ordinatur…"
+
+#: src/hash_turbo/gui/hash_view_model.py:392
+#, python-brace-format
+msgid "Found {} file(s). Hashing…"
+msgstr "{} datoteca(s) chattada(s). Hashing…"
+
+#: src/hash_turbo/gui/hash_view_model.py:400
+#: src/hash_turbo/gui/sanitize_view_model.py:225
+#: src/hash_turbo/gui/verify_view_model.py:503
+#, python-brace-format
+msgid "Completed in {:.2f}s"
+msgstr "Finì en {:.2f}s"
+
+#: src/hash_turbo/gui/hash_view_model.py:402
+#, python-brace-format
+msgid "Done. {} hash(es) written."
+msgstr "Finì. {} hash(es) scrit(s)."
+
+#: src/hash_turbo/gui/hash_view_model.py:413
+#, python-brace-format
+msgid "Cancelled. {} file(s) completed."
+msgstr "Interrut. {} datoteca(s) elavurada(s)."
+
+#: src/hash_turbo/gui/sanitize_view_model.py:228
+#, python-brace-format
+msgid "Done. {} entries."
+msgstr "Finì. {} entradas."
+
+#: src/hash_turbo/gui/sanitize_view_model.py:233
+#: src/hash_turbo/gui/sanitize_view_model.py:234
+#: src/hash_turbo/gui/sanitize_worker.py:87
+#: src/hash_turbo/gui/verify_view_model.py:517
+#, python-brace-format
+msgid "Error: {}"
+msgstr "Errur: {}"
+
+#: src/hash_turbo/gui/sanitize_view_model.py:238
+msgid "Cancelled."
+msgstr "Interrut."
+
+#: src/hash_turbo/gui/sanitize_view_model.py:278
+#, python-brace-format
+msgid "Error: could not write to {}"
+msgstr "Errur: impussibel da scriver en {}"
+
+#: src/hash_turbo/gui/verify_view_model.py:262
+msgid "Error: could not parse hash entries"
+msgstr "Errur: impussibel dad analisar las entradas da hash"
+
+#: src/hash_turbo/gui/verify_view_model.py:294
+#: src/hash_turbo/gui/verify_view_model.py:416
+#, python-brace-format
+msgid "Verifying… {} / {} files"
+msgstr "Verificaziun… {} / {} datotecas"
+
+#: src/hash_turbo/gui/verify_view_model.py:302
+#, python-brace-format
+msgid "Verifying {} hash(es) against {}…"
+msgstr "Verificaziun da {} hash(es) cunter {}…"
+
+#: src/hash_turbo/gui/verify_view_model.py:341
+#, python-brace-format
+msgid "Cancelled. {} file(s) verified."
+msgstr "Interrut. {} datoteca(s) verifitgada(s)."
+
+#: src/hash_turbo/gui/verify_view_model.py:403
+msgid "Detecting new files…"
+msgstr "Reconuscher novas datotecas…"
+
+#: src/hash_turbo/gui/verify_view_model.py:411
+#, python-brace-format
+msgid "Verified {}/{}. Scanning for new files…"
+msgstr "{}/{} verifitgà. Tschertga da novas datotecas…"
+
+#: src/hash_turbo/gui/verify_view_model.py:418
+#, python-brace-format
+msgid "{} passed"
+msgstr "{} reussì"
+
+#: src/hash_turbo/gui/verify_view_model.py:420
+#, python-brace-format
+msgid "{} failed"
+msgstr "{} betg reussì"
+
+#: src/hash_turbo/gui/verify_view_model.py:422
+#, python-brace-format
+msgid "{} missing"
+msgstr "{} mancant"
+
+#: src/hash_turbo/gui/verify_view_model.py:505
+#, python-brace-format
+msgid "Done. Passed: {}  Failed: {}  Missing: {}  New: {}"
+msgstr "Finì. Reussì: {}  Betg reussì: {}  Mancant: {}  Nov: {}"
+
+#: src/hash_turbo/gui/verify_view_model.py:550
+msgid "hash-turbo verification report"
+msgstr "Rapport da verificaziun hash-turbo"
+
+#: src/hash_turbo/gui/verify_view_model.py:551
+#, python-brace-format
+msgid "Date: {}"
+msgstr "Data: {}"
+
+#: src/hash_turbo/gui/verify_view_model.py:552
+#, python-brace-format
+msgid "Hash file: {}"
+msgstr "Datoteca da hash: {}"
+
+#: src/hash_turbo/gui/verify_view_model.py:554
+#, python-brace-format
+msgid "Total: {}  Passed: {}  Failed: {}  Missing: {}  New: {}"
+msgstr "Total: {}  Reussì: {}  Betg reussì: {}  Mancant: {}  Nov: {}"
+
+#: src/hash_turbo/gui/verify_view_model.py:571
+msgid "New files (no hash entry):"
+msgstr "Novas datotecas (nagina entrada da hash):"
 
 #: QML
 msgid "%1 entries loaded (showing first 200 lines)"

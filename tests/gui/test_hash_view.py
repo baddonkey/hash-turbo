@@ -220,6 +220,42 @@ class TestHashViewModelE2E:
         paths = [ln.split(" *", 1)[1] for ln in lines]
         assert paths == sorted(paths, key=str.lower)
 
+    def test_hash_logs_elapsed_time_after_completion(
+        self, qtbot: QtBot, hash_model: HashViewModel, populated_dir: Path,
+    ) -> None:
+        # Arrange
+        output_path = populated_dir / "checksums.sha256"
+        hash_model.addFolder(_folder_url(populated_dir))
+        assert hash_model.logText == ""
+
+        # Act
+        hash_model.startHash(
+            "sha256", "gnu", True, True, str(populated_dir), str(output_path),
+        )
+        _wait_hash_done(qtbot, hash_model)
+
+        # Assert
+        assert "Completed in" in hash_model.logText
+        assert "Done." in hash_model.logText
+
+    def test_hash_clear_resets_log_text(
+        self, qtbot: QtBot, hash_model: HashViewModel, populated_dir: Path,
+    ) -> None:
+        # Arrange
+        output_path = populated_dir / "checksums.sha256"
+        hash_model.addFolder(_folder_url(populated_dir))
+        hash_model.startHash(
+            "sha256", "gnu", True, True, str(populated_dir), str(output_path),
+        )
+        _wait_hash_done(qtbot, hash_model)
+        assert hash_model.logText != ""
+
+        # Act
+        hash_model.clear()
+
+        # Assert
+        assert hash_model.logText == ""
+
 
 class TestHashViewModelFormat:
     """Tests for the output format selector (GNU vs BSD)."""

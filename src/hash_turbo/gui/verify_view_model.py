@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -81,6 +82,7 @@ class VerifyViewModel(ViewModelBase):
         self._output_dir: str = ""
         self._worker: VerifyWorker | None = None
         self._logged_scanning_new = False
+        self._start_time: float | None = None
 
         self._poll_timer = QTimer(self)
         self._poll_timer.setInterval(100)
@@ -294,6 +296,7 @@ class VerifyViewModel(ViewModelBase):
         )
         self._set_prop("_is_verifying", True, self.is_verifying_changed)
         self._set_prop("_can_open_report", False, self.can_open_report_changed)
+        self._start_time = time.monotonic()
 
         self._append_log(
             _("Verifying {} hash(es) against {}\u2026").format(len(entries), effective_base)
@@ -496,10 +499,13 @@ class VerifyViewModel(ViewModelBase):
         )
 
         new_count = len(new_files)
+        elapsed = time.monotonic() - self._start_time if self._start_time is not None else 0.0
+        elapsed_label = _("Completed in {:.2f}s").format(elapsed)
         self._append_log(
             _("Done. Passed: {}  Failed: {}  Missing: {}  New: {}").format(
                 self._passed, self._failed, self._missing, new_count,
             )
+            + "  \u2014  " + elapsed_label
         )
         self._set_prop("_is_verifying", False, self.is_verifying_changed)
         self._set_prop("_progress_visible", False, self.progress_visible_changed)

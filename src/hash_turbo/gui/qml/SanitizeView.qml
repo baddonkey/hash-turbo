@@ -468,6 +468,33 @@ Page {
             }
         }
 
+        // ── Log ───────────────────────────────────────────────
+        GroupBox {
+            Layout.fillWidth: true
+            Layout.preferredHeight: 62
+            title: qsTr("Log")
+            label: FloatingBadge { text: parent.title }
+
+            ScrollView {
+                anchors.fill: parent
+
+                TextArea {
+                    readOnly: true
+                    text: sanitizeModel?.logText ?? ""
+                    font.pixelSize: 12
+                    font.family: window.monoFont
+                    wrapMode: TextArea.NoWrap
+                    background: null
+                    topPadding: 0; bottomPadding: 0; implicitHeight: 36; leftPadding: 0
+                    opacity: 0.7
+
+                    onTextChanged: {
+                        cursorPosition = text.length
+                    }
+                }
+            }
+        }
+
         // ── Result ───────────────────────────────────────────────
         GroupBox {
             Layout.fillWidth: true

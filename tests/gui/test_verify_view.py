@@ -237,6 +237,52 @@ class TestVerifyViewModelE2E:
         assert verify_model.failed_count == 0
         assert verify_model.missing_count == 0
 
+    def test_verify_logs_elapsed_time_after_completion(
+        self,
+        qtbot: QtBot,
+        verify_model: VerifyViewModel,
+        populated_dir: Path,
+        hash_file_factory: Callable[..., Path],
+    ) -> None:
+        # Arrange
+        hash_file = hash_file_factory(populated_dir)
+        assert verify_model.logText == ""
+
+        # Act
+        content = hash_file.read_text(encoding="utf-8")
+        verify_model.verify(
+            content, str(hash_file), str(populated_dir), False,
+            str(populated_dir), True, True, True,
+        )
+        _wait_verify_done(qtbot, verify_model)
+
+        # Assert
+        assert "Completed in" in verify_model.logText
+        assert "Done." in verify_model.logText
+
+    def test_verify_clear_resets_log_text(
+        self,
+        qtbot: QtBot,
+        verify_model: VerifyViewModel,
+        populated_dir: Path,
+        hash_file_factory: Callable[..., Path],
+    ) -> None:
+        # Arrange
+        hash_file = hash_file_factory(populated_dir)
+        content = hash_file.read_text(encoding="utf-8")
+        verify_model.verify(
+            content, str(hash_file), str(populated_dir), False,
+            str(populated_dir), True, True, True,
+        )
+        _wait_verify_done(qtbot, verify_model)
+        assert verify_model.logText != ""
+
+        # Act
+        verify_model.clear()
+
+        # Assert
+        assert verify_model.logText == ""
+
 
 class TestPathCombinations:
     """Hash -> Verify with all relative/absolute path combinations."""

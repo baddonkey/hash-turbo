@@ -3,7 +3,7 @@
     "PostToolUse": [
       {
         "type": "command",
-        "command": "if git diff --cached --name-only --diff-filter=d 2>/dev/null | grep -q '\\.py$'; then echo 'Running mypy...' && python -m mypy --strict $(git diff --cached --name-only --diff-filter=d | grep '\\.py$') && echo 'Running pytest...' && python -m pytest -x --tb=short -q; fi",
+        "command": "python scripts/hook_pre_commit_check.py",
         "timeout": 60
       }
     ]

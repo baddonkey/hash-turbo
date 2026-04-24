@@ -2,17 +2,19 @@
 
 from __future__ import annotations
 
+import time
 from pathlib import Path
 from threading import Thread
 
 from PySide6.QtCore import QObject, QUrl, Property, Signal, Slot
 from PySide6.QtGui import QDesktopServices
 
+from hash_turbo.gui._view_model_base import ViewModelBase
 from hash_turbo.gui.sanitize_worker import SanitizeWorker
 from hash_turbo.i18n import _
 
 
-class SanitizeViewModel(QObject):
+class SanitizeViewModel(ViewModelBase):
     """Backend for the Sanitize tab — parse, transform, and format hash entries."""
 
     output_text_changed = Signal()
@@ -23,6 +25,7 @@ class SanitizeViewModel(QObject):
     result_entries_changed = Signal()
     output_path_changed = Signal()
     can_open_result_changed = Signal()
+    log_text_changed = Signal()
 
     # Maximum lines shown in the QML TextArea preview.
     _PREVIEW_LINES = 200
@@ -38,6 +41,8 @@ class SanitizeViewModel(QObject):
         self._result_entries: list[dict[str, str]] = []
         self._output_path = ""
         self._can_open_result = False
+        self._log_text = ""
+        self._start_time: float | None = None
         self.fileLoaded.connect(self._on_file_loaded)
 
     # -- outputText property ---------------------------------------------
@@ -85,6 +90,11 @@ class SanitizeViewModel(QObject):
         return self._can_open_result
 
     canOpenResult = Property(bool, _get_can_open_result, notify=can_open_result_changed)  # noqa: N815
+
+    def _get_log_text(self) -> str:
+        return self._log_text
+
+    logText = Property(str, _get_log_text, notify=log_text_changed)  # noqa: N815
 
     # -- slots -----------------------------------------------------------
 
@@ -146,7 +156,9 @@ class SanitizeViewModel(QObject):
         """Launch the transform in a background thread."""
         effective_content = self._loaded_content if self._loaded_content is not None else content
         self._loaded_content = None
+        self._set_prop("_log_text", "", self.log_text_changed)
         self._set_sanitizing(True)
+        self._start_time = time.monotonic()
 
         worker = SanitizeWorker(
             effective_content, fmt, separator, strip_prefix,
@@ -197,6 +209,7 @@ class SanitizeViewModel(QObject):
         self._result_entries = []
         self.result_entries_changed.emit()
         self._set_can_open_result(False)
+        self._set_prop("_log_text", "", self.log_text_changed)
 
     # -- worker callbacks ------------------------------------------------
 
@@ -208,13 +221,21 @@ class SanitizeViewModel(QObject):
         self._result_entries = entries
         self.result_entries_changed.emit()
         self._auto_save(result)
+        elapsed = time.monotonic() - self._start_time if self._start_time is not None else 0.0
+        elapsed_label = _("Completed in {:.2f}s").format(elapsed)
+        entry_count = len(entries)
+        self._append_log(
+            _("Done. {} entries.").format(entry_count) + "  \u2014  " + elapsed_label
+        )
         self._set_sanitizing(False)
 
     def _on_error(self, message: str) -> None:
         self._set_output_text(_("Error: {}").format(message))
+        self._append_log(_("Error: {}").format(message))
         self._set_sanitizing(False)
 
     def _on_cancelled(self) -> None:
+        self._append_log(_("Cancelled."))
         self._set_sanitizing(False)
 
     # -- internal --------------------------------------------------------

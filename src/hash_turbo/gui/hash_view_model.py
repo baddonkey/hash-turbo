@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import time
 from pathlib import Path
 
 from PySide6.QtCore import QObject, QTimer, QUrl, Property, Signal, Slot
@@ -58,6 +59,7 @@ class HashViewModel(ViewModelBase):
         self._is_hashing = False
         self._can_open_output = False
         self._output_path = ""
+        self._start_time: float | None = None
 
         self._poll_timer = QTimer(self)
         self._poll_timer.setInterval(100)
@@ -207,6 +209,7 @@ class HashViewModel(ViewModelBase):
         self._set_prop("_progress_label", _("Scanning files\u2026"), self.progress_label_changed)
         self._set_prop("_is_hashing", True, self.is_hashing_changed)
         self._set_prop("_can_open_output", False, self.can_open_output_changed)
+        self._start_time = time.monotonic()
 
         paths = [Path(p) for p in self._pending]
         self._worker = HashWorker(
@@ -239,6 +242,7 @@ class HashViewModel(ViewModelBase):
         self._set_prop("_log_visible", False, self.log_visible_changed)
         self._set_prop("_progress_visible", False, self.progress_visible_changed)
         self._set_prop("_can_open_output", False, self.can_open_output_changed)
+
 
     @Slot(str)
     def openOutput(self, path: str) -> None:  # noqa: N802
@@ -392,7 +396,12 @@ class HashViewModel(ViewModelBase):
         self._drain_all()
         self._update_progress_from_worker()
         self._write_sorted_output()
-        self._append_log(_("Done. {} hash(es) written.").format(len(self._results)))
+        elapsed = time.monotonic() - self._start_time if self._start_time is not None else 0.0
+        elapsed_label = _("Completed in {:.2f}s").format(elapsed)
+        self._append_log(
+            _("Done. {} hash(es) written.").format(len(self._results))
+            + "  \u2014  " + elapsed_label
+        )
         self._set_prop("_is_hashing", False, self.is_hashing_changed)
         self._set_prop("_progress_visible", False, self.progress_visible_changed)
 

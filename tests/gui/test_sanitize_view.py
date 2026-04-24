@@ -265,3 +265,37 @@ class TestSanitizeLoadAndSave:
         assert entries[0]["path"] == "empty.txt"
         assert "hash" in entries[0]
         assert "algorithm" in entries[0]
+
+
+class TestSanitizeLog:
+    def test_transform_logs_elapsed_time_after_completion(
+        self, sanitize_model: SanitizeViewModel,
+    ) -> None:
+        # Arrange
+        assert sanitize_model.logText == ""
+
+        # Act
+        sanitize_model.transform(
+            _GNU_SHA256, "gnu", "keep", "",
+            "lower", "none", False, False, "lf",
+        )
+
+        # Assert
+        assert "Completed in" in sanitize_model.logText
+        assert "Done." in sanitize_model.logText
+
+    def test_clear_resets_log(
+        self, sanitize_model: SanitizeViewModel,
+    ) -> None:
+        # Arrange
+        sanitize_model.transform(
+            _GNU_SHA256, "gnu", "keep", "",
+            "lower", "none", False, False, "lf",
+        )
+        assert sanitize_model.logText != ""
+
+        # Act
+        sanitize_model.clear()
+
+        # Assert
+        assert sanitize_model.logText == ""

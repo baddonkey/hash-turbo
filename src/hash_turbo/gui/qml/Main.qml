@@ -7,7 +7,7 @@ ApplicationWindow {
     id: window
     visible: true
     width: 1060
-    height: 800
+    height: 840
     minimumWidth: 800
     minimumHeight: 600
     title: "hash-turbo"
