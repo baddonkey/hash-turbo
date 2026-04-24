@@ -24,6 +24,7 @@ dev = [
     "pytest-qt>=4.2",
     "mypy>=1.5",
     "pyinstaller>=6.0",
+    "edge-tts>=6.1",
 ]
 
 [project.scripts]

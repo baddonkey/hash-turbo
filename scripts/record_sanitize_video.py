@@ -77,7 +77,7 @@ _TRANSLATIONS: dict[str, list[str]] = {
         "Eine GNU-formatierte Hash-Datei aus den Projektquellen laden.",
         "Die Datei ist geladen. Die GNU-Prüfsummen sind auf der linken Seite sichtbar.",
         "Optionen wählen: BSD-Format, POSIX-Trennzeichen, nach Pfad sortiert.",
-        "Auf Transform klicken, um die gewählten Optionen auf die Eingabe anzuwenden.",
+        "Auf Transformieren klicken, um die gewählten Optionen auf die Eingabe anzuwenden.",
         "Die Transformation ist abgeschlossen. BSD-Prüfsummen erscheinen auf der rechten Seite.",
     ],
     "fr": [
@@ -85,7 +85,7 @@ _TRANSLATIONS: dict[str, list[str]] = {
         "Charger un fichier de hachage au format GNU généré depuis les sources du projet.",
         "Le fichier est chargé. Les sommes de contrôle GNU sont visibles à gauche.",
         "Définir les options : format BSD, séparateurs POSIX, trié par chemin.",
-        "Cliquer sur Transform pour appliquer les options sélectionnées à l'entrée.",
+        "Cliquer sur Transformer pour appliquer les options sélectionnées à l'entrée.",
         "La transformation est terminée. Les sommes de contrôle BSD apparaissent à droite.",
     ],
     "it": [
@@ -93,7 +93,7 @@ _TRANSLATIONS: dict[str, list[str]] = {
         "Caricare un file hash in formato GNU generato dai file sorgente del progetto.",
         "Il file è caricato. I checksum in formato GNU sono visibili a sinistra.",
         "Impostare le opzioni: formato BSD, separatori POSIX, ordinato per percorso.",
-        "Cliccare Transform per applicare le opzioni selezionate all'input.",
+        "Cliccare Trasforma per applicare le opzioni selezionate all'input.",
         "La trasformazione è completata. I checksum in formato BSD appaiono a destra.",
     ],
     "rm": [

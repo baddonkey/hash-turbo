@@ -1,6 +1,6 @@
 # hash-turbo — File Hash Management Tool
 
-> Last updated: 2026-04-21
+> Last updated: 2026-04-24
 
 ## Problem Statement
 
@@ -161,7 +161,7 @@ A PySide6 + QML (Qt Quick with Material style) desktop application providing vis
 - Output file field for writing results to a hash file (auto-filled from folder selection)
 - Progress bar with percentage and current file name
 - Rolling results terminal (monospace, last 200 lines) showing hash output in selected format
-- Activity log showing scan progress and status messages
+- Activity log showing scan progress and status messages; final line includes elapsed time (e.g. `Completed in 1.23s`)
 - Concurrent scan + hash pipeline: files are hashed as they are discovered, not after a full scan completes
 
 **Hash Verification View:**
@@ -172,7 +172,7 @@ A PySide6 + QML (Qt Quick with Material style) desktop application providing vis
 - Options: output folder, detect new files, flexible whitespace, binary mode only
 - Visual pass/fail indicators per file (OK, FAIL, MISSING, NEW)
 - Progress bar with percentage during verification
-- Activity log with summary: passed, failed, missing, new
+- Activity log with summary: passed, failed, missing, new; final line includes elapsed time
 - Report generation — open the verification report file after completion
 
 **Sanitize View:**
@@ -182,6 +182,7 @@ A PySide6 + QML (Qt Quick with Material style) desktop application providing vis
 - Options panel: output format, path separator, strip prefix, hash case, sort, deduplicate, normalize whitespace, line ending
 - Output file field — auto-filled as `<stem>-sanitized.<ext>` from the loaded file
 - Transform button applies all selected operations; result auto-saved to output file
+- Activity log showing completion status and elapsed time
 - Result displayed in a ListView with alternating row colors on a terminal-style black background
 
 **Settings:**

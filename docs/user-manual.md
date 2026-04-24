@@ -1,6 +1,6 @@
 # hash-turbo User Manual
 
-> Version 1.0.19
+> Version 1.0.1
 
 Cross-platform file hash management tool with CLI and PySide6 QML GUI. Generates, stores, verifies, and sanitizes file hashes with support for many algorithms.
 
@@ -109,6 +109,7 @@ Displays real-time progress during hashing:
 
 - A progress bar with percentage and current file name
 - Status messages: scanning progress, file count, completion summary
+- Final line includes elapsed time (e.g. `Done. 5 hash(es) written.  —  Completed in 1.23s`)
 
 #### Result
 
@@ -160,7 +161,7 @@ Shows verification progress with:
 
 - A progress bar with percentage and current file name
 - Status messages for each file being verified
-- Summary line: `Passed: N  Failed: N  Missing: N  New: N`
+- Summary line: `Passed: N  Failed: N  Missing: N  New: N  —  Completed in X.XXs`
 
 #### Result
 
@@ -214,6 +215,13 @@ A read-only monospace text area showing the loaded hash file content. For large 
 
 - **Transform** — apply all selected transformations. Changes to **Cancel** while running.
 - **Clear** — reset all fields and results.
+
+#### Log
+
+Displays status messages after each transformation:
+
+- Completion summary with entry count and elapsed time (e.g. `Done. 7 entries.  —  Completed in 0.05s`)
+- Error messages if the input cannot be parsed
 
 #### Result
 

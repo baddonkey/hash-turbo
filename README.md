@@ -1,6 +1,6 @@
 # hash-turbo
 
-> Last updated: 2026-04-21
+> Last updated: 2026-04-24
 
 Cross-platform file hash management tool with CLI and PySide6 QML GUI. Generates, stores, and verifies file hashes with support for many algorithms.
 

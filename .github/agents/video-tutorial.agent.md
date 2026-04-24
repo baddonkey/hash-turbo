@@ -96,6 +96,8 @@ Every `cursor.move_to(...)` and `QTimer.singleShot(...)` in every step function 
 
 5. **English UI terms in translated narration** — check that narration strings use the actual translated UI labels. For German: the Verify tab/button is **"Verifizieren"**, not "Verify".
 
+6. **`edge-tts` not installed** — if `edge_tts` is not importable, `_generate_clips_edge_tts` returns `None` silently, `pre_generate_clips` falls back to estimated durations with no cached clips, and `build_lang_audio` returns `None`. The video assembles with subtitles only and **no audio track**. The terminal log will say `Embedding N subtitle track(s)` without any `Embedding N audio track(s)` line. Fix: `python -m pip install edge-tts` before running any recording script.
+
 ## Narration Translation Checklist
 
 Before recording, verify that all `_TRANSLATIONS` entries use the translated UI label for any button/tab name mentioned in the narration:
@@ -104,7 +106,7 @@ Before recording, verify that all `_TRANSLATIONS` entries use the translated UI 
 - Key terms to check per script:
   - **hash-verify**: "Hash" button, "Verifizieren" (DE) / "Vérifier" (FR) / "Verifica" (IT) for the verify tab/button
   - **sanitize**: "Bereinigen" (DE) / "Nettoyer" (FR) etc. for the transform/sanitize action
-  - **settings**: "Einstellungen" (DE), "Dunkel"/"Hell" (DE) for dark/light theme
+  - **settings**: "Einstellungen" (DE). The dark/light theme ComboBox model contains the raw English strings `"system"`, `"light"`, `"dark"` — these are **not translated by QML**. Narration must reference these exact values (e.g. *'select "dark"'*), not the localized display names ("Dunkel"/"Hell", "Sombre"/"Clair", "Scuro"/"Chiaro", "Stgir"/"Cler").
 
 ## Running the Scripts
 
@@ -112,9 +114,12 @@ Prerequisites:
 ```powershell
 # Activate venv
 .venv\Scripts\Activate.ps1
-# Confirm edge-tts and ffmpeg are available
-edge-tts --version
+# Install edge-tts if not already present (required for audio; videos will be silent without it)
+python -m pip install edge-tts
+# Confirm ffmpeg is available
 ffmpeg -version
+# Confirm edge-tts is importable
+python -c "import edge_tts; print('edge_tts', edge_tts.__version__)"
 ```
 
 Re-record all 15 videos:
