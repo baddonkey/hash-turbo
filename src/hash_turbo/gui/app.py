@@ -57,6 +57,26 @@ def _set_macos_dock_icon(icon_path: Path) -> None:
         pass
 
 
+def _set_macos_activation_policy() -> None:
+    """Ensure the app registers as a regular foreground app on macOS.
+
+    When frozen by PyInstaller the activation policy can default to
+    NSApplicationActivationPolicyAccessory, which suppresses the native
+    menu bar and dock icon.  Force it to Regular so the app behaves like
+    a normal GUI application.
+    """
+    if sys.platform != "darwin":
+        return
+    try:
+        from AppKit import NSApplication, NSApplicationActivationPolicyRegular  # type: ignore[import-untyped]
+
+        NSApplication.sharedApplication().setActivationPolicy_(
+            NSApplicationActivationPolicyRegular
+        )
+    except ImportError:
+        pass
+
+
 def _set_macos_process_name(name: str) -> None:
     """Set the macOS menu bar title to the app name instead of 'Python'."""
     if sys.platform != "darwin":
@@ -238,6 +258,7 @@ class GuiApp:
         LoggingSetup.configure(level=logging.INFO, file_logging=True)
         _set_windows_app_id()
         _fix_windows_dll_search()
+        _set_macos_activation_policy()
         _set_macos_process_name("hash-turbo")
 
         app, engine, _models = GuiApp._create_engine()
