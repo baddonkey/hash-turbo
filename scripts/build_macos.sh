@@ -92,11 +92,33 @@ cat > "$DMG_STAGING/README.txt" <<'EOF'
 hash-turbo — Cross-platform file hash management tool
 
 • Drag hash-turbo.app into Applications to install.
-• For CLI access, symlink the binary inside the app:
-    sudo ln -sf /Applications/hash-turbo.app/Contents/MacOS/hash-turbo /usr/local/bin/hash-turbo
+• For CLI access, double-click "Install CLI Tool.command" in this DMG.
+  This creates a /usr/local/bin/hash-turbo symlink so you can run
+  hash-turbo from any terminal.
 
-Full documentation: https://github.com/your-org/hash-turbo
+Full documentation: https://github.com/baddonkey/hash-turbo
 EOF
+
+# Double-clickable .command script to install the CLI symlink
+cat > "$DMG_STAGING/Install CLI Tool.command" <<'EOF'
+#!/usr/bin/env bash
+set -euo pipefail
+APP="/Applications/hash-turbo.app"
+BINARY="$APP/Contents/MacOS/hash-turbo"
+LINK="/usr/local/bin/hash-turbo"
+
+if [[ ! -d "$APP" ]]; then
+    echo "ERROR: hash-turbo.app not found in /Applications."
+    echo "       Drag hash-turbo.app into Applications first, then re-run this script."
+    exit 1
+fi
+
+sudo mkdir -p /usr/local/bin
+sudo ln -sf "$BINARY" "$LINK"
+echo "✓ Installed: $LINK -> $BINARY"
+echo "  You can now run 'hash-turbo' from any terminal."
+EOF
+chmod +x "$DMG_STAGING/Install CLI Tool.command"
 
 # Build a compressed read-only DMG
 hdiutil create \
