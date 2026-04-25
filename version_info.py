@@ -1,8 +1,8 @@
 # Auto-generated from hash-turbo.spec — do not edit manually.
 VSVersionInfo(
     ffi=FixedFileInfo(
-        filevers=(1, 0, 1, 0),
-        prodvers=(1, 0, 1, 0),
+        filevers=(1, 0, 2, 0),
+        prodvers=(1, 0, 2, 0),
         mask=0x3F,
         flags=0x0,
         OS=0x40004,
@@ -18,12 +18,12 @@ VSVersionInfo(
                     [
                         StringStruct("CompanyName", "hash-turbo"),
                         StringStruct("FileDescription", "hash-turbo — Cross-platform file hash management tool"),
-                        StringStruct("FileVersion", "1.0.1"),
+                        StringStruct("FileVersion", "1.0.2"),
                         StringStruct("InternalName", "hash-turbo"),
                         StringStruct("LegalCopyright", "Copyright (c) 2025-2026 hash-turbo contributors"),
                         StringStruct("OriginalFilename", "hash-turbo.exe"),
                         StringStruct("ProductName", "hash-turbo"),
-                        StringStruct("ProductVersion", "1.0.1"),
+                        StringStruct("ProductVersion", "1.0.2"),
                     ],
                 )
             ]
