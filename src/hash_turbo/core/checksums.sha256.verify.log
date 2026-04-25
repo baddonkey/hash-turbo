@@ -1,0 +1,23 @@
+Rapport da verificaziun hash-turbo
+Data: 2026-04-24 09:24:25 UTC
+Datoteca da hash: C:\Users\stefan\AppData\Local\Temp\hash-turbo-hv-rm-a1xpgnpc\output\checksums.sha256
+
+Total: 17  Reussì: 17  Betg reussì: 0  Mancant: 0  Nov: 0
+
+  OK      __init__.py
+  OK      checksums.sha256.verify.log
+  OK      exclude_filter.py
+  OK      hash_file.py
+  OK      hasher.py
+  OK      models.py
+  OK      path_key.py
+  OK      sanitizer.py
+  OK      verifier.py
+  OK      __pycache__\__init__.cpython-313.pyc
+  OK      __pycache__\exclude_filter.cpython-313.pyc
+  OK      __pycache__\hash_file.cpython-313.pyc
+  OK      __pycache__\hasher.cpython-313.pyc
+  OK      __pycache__\models.cpython-313.pyc
+  OK      __pycache__\path_key.cpython-313.pyc
+  OK      __pycache__\sanitizer.cpython-313.pyc
+  OK      __pycache__\verifier.cpython-313.pyc

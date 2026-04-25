@@ -17,6 +17,15 @@ from hash_turbo.i18n import current_language, set_language
 _VISUAL_DELAY_MS = 1200
 
 
+def pytest_configure(config: pytest.Config) -> None:  # noqa: ARG001
+    """Initialize QtWebEngine before QApplication is created by pytest-qt."""
+    try:
+        from PySide6.QtWebEngineQuick import QtWebEngineQuick
+        QtWebEngineQuick.initialize()
+    except Exception:
+        pass
+
+
 @pytest.fixture(autouse=True)
 def _ensure_english_locale() -> Generator[None, None, None]:
     previous = current_language()
@@ -95,6 +104,8 @@ def qml_app(
     ctx.setContextProperty("hashModel", hash_model)
     ctx.setContextProperty("verifyModel", verify_model)
     ctx.setContextProperty("sanitizeModel", sanitize_model)
+    ctx.setContextProperty("userManualUrl", "")
+    ctx.setContextProperty("thirdPartyLicensesHtml", "")
 
     from PySide6.QtGui import QGuiApplication
 

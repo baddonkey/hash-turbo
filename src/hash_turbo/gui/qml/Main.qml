@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Controls.Material
 import QtQuick.Layouts
+import QtWebEngine
 
 ApplicationWindow {
     id: window
@@ -17,6 +18,17 @@ ApplicationWindow {
     onTestTabIndexChanged: if (testTabIndex >= 0) tabBar.currentIndex = testTabIndex
 
     readonly property string monoFont: Qt.platform.os === "osx" ? "Menlo" : "Consolas"
+
+    // Colours for the third-party licenses WebEngineView HTML template.
+    // Use rgb() to avoid Qt's #AARRGGBB string format being misread by CSS as #RRGGBBAA.
+    readonly property string _licenseLinkColor: settingsModel?.theme === "dark" ? "#64FFDA" : "#00695C"
+    function _toRgb(c) {
+        return "rgb(" + Math.round(c.r * 255) + "," + Math.round(c.g * 255) + "," + Math.round(c.b * 255) + ")"
+    }
+    readonly property string _licenseBgColor: _toRgb(Material.background)
+    readonly property string _licenseTextColor: _toRgb(Material.foreground)
+    readonly property string _licenseBorderColor: _toRgb(Qt.darker(Material.background, 1.4))
+    readonly property string _licenseHeaderBg: _toRgb(Qt.darker(Material.background, 1.1))
 
     Material.theme: {
         if (settingsModel?.theme === "dark") return Material.Dark
@@ -69,22 +81,34 @@ ApplicationWindow {
         height: Math.min(window.height * 0.85, 640)
 
         ScrollView {
+            id: licensesScroll
             anchors.fill: parent
             clip: true
+            contentWidth: availableWidth
 
-            TextArea {
-                text: thirdPartyLicensesText
-                textFormat: TextEdit.MarkdownText
-                readOnly: true
-                font.pixelSize: 13
-                wrapMode: TextArea.Wrap
-                selectByMouse: true
-                background: null
-                onLinkActivated: (link) => Qt.openUrlExternally(link)
-                MouseArea {
-                    anchors.fill: parent
-                    acceptedButtons: Qt.NoButton
-                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+            WebEngineView {
+                width: licensesScroll.availableWidth
+                height: Math.max(licensesScroll.height, implicitHeight)
+                settings.showScrollBars: false
+
+                property string licenseHtml: (thirdPartyLicensesHtml ?? "")
+                    .split("TEXTCOLOR").join(window._licenseTextColor)
+                    .split("BGCOLOR").join(window._licenseBgColor)
+                    .split("LINKCOLOR").join(window._licenseLinkColor)
+                    .split("BORDERCOLOR").join(window._licenseBorderColor)
+                    .split("HEADERBG").join(window._licenseHeaderBg)
+                    .split("CODEBG").join(window._licenseBorderColor)
+
+                onLicenseHtmlChanged: loadHtml(licenseHtml)
+                Component.onCompleted: loadHtml(licenseHtml)
+
+                onNavigationRequested: (request) => {
+                    // navigationType 0 = LinkClickedNavigation
+                    if (request.navigationType === 0) {
+                        Qt.openUrlExternally(request.url)
+                        request.reject()
+                    }
+                    // all other types (OtherNavigation = loadHtml) are allowed
                 }
             }
         }

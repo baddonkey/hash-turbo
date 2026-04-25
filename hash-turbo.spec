@@ -74,6 +74,8 @@ a = Analysis(
         'hash_turbo.gui.settings_model',
         'hash_turbo.gui.hash_worker',
         'hash_turbo.gui.verify_worker',
+        'markdown',
+        'markdown.extensions.tables',
     ],
     hookspath=[],
     hooksconfig={},

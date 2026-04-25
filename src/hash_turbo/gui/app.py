@@ -165,6 +165,11 @@ class GuiApp:
         from hash_turbo.gui.settings_model import SettingsModel
         from hash_turbo.gui.verify_view_model import VerifyViewModel
 
+        # Must be called before QApplication is created.
+        if QApplication.instance() is None:
+            from PySide6.QtWebEngineQuick import QtWebEngineQuick
+            QtWebEngineQuick.initialize()
+
         app = QApplication.instance()
         if app is None:
             app = QApplication(sys.argv)
@@ -222,18 +227,51 @@ class GuiApp:
             QUrl.fromLocalFile(str(manual_path)).toString() if manual_path.exists() else "",
         )
 
-        # Third-party licenses text — bundled beside assets in frozen builds,
-        # or read from the project root in dev mode.
-        _licenses_candidates = [
-            assets_dir / "THIRD-PARTY-LICENSES.md",
-            Path(__file__).parent.parent.parent.parent / "THIRD-PARTY-LICENSES.md",
-        ]
+        # Third-party licenses — rendered to HTML so QML can use a WebEngineView
+        # with proper theme-aware colours (TEXTCOLOR etc. placeholders substituted in QML).
+        if getattr(sys, "frozen", False):
+            _licenses_candidates = [
+                Path(sys._MEIPASS) / "hash_turbo" / "assets" / "THIRD-PARTY-LICENSES.md",
+            ]
+        else:
+            _licenses_candidates = [
+                assets_dir / "THIRD-PARTY-LICENSES.md",
+                Path(__file__).parent.parent.parent.parent / "THIRD-PARTY-LICENSES.md",
+            ]
         _licenses_text = ""
         for _p in _licenses_candidates:
             if _p.exists():
                 _licenses_text = _p.read_text(encoding="utf-8")
                 break
-        ctx.setContextProperty("thirdPartyLicensesText", _licenses_text)
+        _licenses_html = ""
+        try:
+            import re as _re
+            import markdown as _md_lib
+
+            _body = _md_lib.markdown(_licenses_text, extensions=["tables"])
+            # Auto-link bare URLs that ended up as plain text inside <td> cells.
+            _body = _re.sub(
+                r'(?<=>)(https?://[^\s<"]+)(?=\s*</td>)',
+                r'<a href="\1">\1</a>',
+                _body,
+            )
+            _licenses_html = (
+                "<!DOCTYPE html><html><head><meta charset='utf-8'>"
+                "<style>"
+                "body{font-family:sans-serif;font-size:13px;color:TEXTCOLOR;background:BGCOLOR;margin:12px 16px;}"
+                "h1,h2,h3{color:TEXTCOLOR;}"
+                "a{color:LINKCOLOR;}"
+                "table{border-collapse:collapse;width:100%;}"
+                "th,td{border:1px solid BORDERCOLOR;padding:4px 8px;text-align:left;}"
+                "th{background:HEADERBG;}"
+                "code{background:CODEBG;padding:1px 4px;border-radius:3px;font-size:12px;}"
+                "</style></head><body>"
+                + _body
+                + "</body></html>"
+            )
+        except Exception:
+            _licenses_html = "<pre>" + _licenses_text + "</pre>"
+        ctx.setContextProperty("thirdPartyLicensesHtml", _licenses_html)
 
         qml_path = Path(__file__).parent / "qml" / "Main.qml"
         engine.load(QUrl.fromLocalFile(str(qml_path)))

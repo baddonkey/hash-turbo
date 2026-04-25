@@ -58,6 +58,11 @@ pytest --tb=short   # Shorter tracebacks
 - Keep modules small and focused — one concept per module.
 - Name tests descriptively: `test_<unit>_<scenario>_<expected>`.
 
+## Release & Publishing Rules
+
+- **Never upload, publish, or push release assets autonomously.** Building the MSI/DMG is fine when asked, but uploading to GitHub releases or any remote requires explicit user instruction.
+- After a build completes, stop and let the user decide what to do with the artifact.
+
 ## Agent Reference
 
 | Agent | Purpose |
