@@ -63,6 +63,12 @@ pytest --tb=short   # Shorter tracebacks
 - **Never upload, publish, or push release assets autonomously.** Building the MSI/DMG is fine when asked, but uploading to GitHub releases or any remote requires explicit user instruction.
 - After a build completes, stop and let the user decide what to do with the artifact.
 
+## Terminal Discipline
+
+- **One terminal per task.** Open a single terminal and reuse it for all sequential steps via `send_to_terminal`. Never open a new terminal when an existing one can be reused.
+- **Always kill terminals when done.** Call `kill_terminal` after a task completes — never leave dangling terminals open.
+- **Fix and retry in the same session.** When a command fails, correct it and reuse the same terminal — do not spawn a new one.
+
 ## Agent Reference
 
 | Agent | Purpose |
