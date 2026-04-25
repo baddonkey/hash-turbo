@@ -27,6 +27,7 @@ from PySide6.QtCore import QTimer, QUrl
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtQuickControls2 import QQuickStyle
+from PySide6.QtWebEngineQuick import QtWebEngineQuick
 
 SCREENSHOT_DIR = _project_root / "docs" / "screenshots"
 
@@ -89,6 +90,7 @@ def main() -> None:
 
 
 def _run_gui(tmp_dir: Path, sample_dir: Path, hash_file: Path) -> None:
+    QtWebEngineQuick.initialize()  # must be called before QGuiApplication
     app = QGuiApplication(sys.argv)
     app.setApplicationName("hash-turbo")
     app.setOrganizationName("hash-turbo")
@@ -123,6 +125,7 @@ def _run_gui(tmp_dir: Path, sample_dir: Path, hash_file: Path) -> None:
     ctx.setContextProperty("verifyModel", verify_model)
     ctx.setContextProperty("sanitizeModel", sanitize_model)
     ctx.setContextProperty("userManualUrl", "")
+    ctx.setContextProperty("thirdPartyLicensesHtml", "")
 
     qml_path = _project_root / "src" / "hash_turbo" / "gui" / "qml" / "Main.qml"
     engine.load(QUrl.fromLocalFile(str(qml_path)))
